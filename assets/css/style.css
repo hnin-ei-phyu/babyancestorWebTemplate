@@ -512,7 +512,7 @@ section {
 }
 
 #about .about-container .icon-box:hover .icon i {
-  color: #fff;
+  color: #000364;
 }
 
 #about .about-container .icon-box .title {
@@ -557,18 +557,6 @@ section {
 
 #services .box:hover {
   transform: translateY(-5px);
-}
-
-#services .icon {
-  position: absolute;
-  /* left: -2px;
-  top: calc(50% - 32px); */
-}
-
-#services .icon i {
-  font-size: 44px;
-  line-height: 0;
-  transition: 0.5s;
 }
 
 #services .title {
