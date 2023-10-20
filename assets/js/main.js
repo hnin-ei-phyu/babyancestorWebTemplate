@@ -5,8 +5,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
-  "use strict";
+;(function() {
+  "use strict"
 
   /**
    * Easy selector helper function
@@ -158,44 +158,44 @@
         scrollto(window.location.hash)
       }
     }
-  });
+  })
 
   /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
+    let portfolioContainer = select('.portfolio-container')
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
-      });
+      })
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select('#portfolio-flters li', true)
 
       on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
+        e.preventDefault()
         portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+          el.classList.remove('filter-active')
+        })
+        this.classList.add('filter-active')
 
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
-        });
+        })
         portfolioIsotope.on('arrangeComplete', function() {
           AOS.refresh()
-        });
-      }, true);
+        })
+      }, true)
     }
 
-  });
+  })
 
   /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
-  });
+  })
 
 
   /**
@@ -208,11 +208,11 @@
       once: true,
       mirror: false
     })
-  });
+  })
 
   /**
    * Initiate Pure Counter 
    */
-  new PureCounter();
+  new PureCounter()
 
 })()

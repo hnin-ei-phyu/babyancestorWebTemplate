@@ -33,8 +33,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 
-   <!-- minislider-->
    <!-- minislider-->
    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -89,11 +89,24 @@
 </head>
 
 <body>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
+    <div>
+      <!-- Google Translate -->
+      <div id="google_element" class="translate"></div>
+      <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+      <script>
+        function loadGoogleTranslate() {
+          new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            "google_element"
+          );
+        }
+      </script>
+    </div>
     <div class="container d-flex justify-content-between">
-
       <div class="logo">
         <!-- Uncomment below if you prefer to use an text logo -->
         <!-- <h1><a href="index.html">NewBiz</a></h1> -->
@@ -104,27 +117,12 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li class="dropdown"><a href="#products">Products</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#clients">Our Clients</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> &nbsp;&nbsp;
         </ul>
+        
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -150,66 +148,100 @@
       </div>
 
     </div>
-  </section><!-- End Hero Section -->
+  </section>
+<!-- End Hero Section -->
 
-  <!--mini slider-->
-
-  <!-- Minislider -->
-  <div class="container my-4">
-    <section id="sliders">
-      <header><h3 style="font-weight: bolder; color: #000364;">Our Products </h3></header>
-        <div class="col-md-10 col-md-offset-1">
-          <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="5000" id="myCarousel">
-            <div class="carousel-inner">
-              <div class="item active">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/lip2.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/liner2.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow1.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/perfume1.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow2.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/liner1.png" class="img-responsive"></a></div>
-              </div>
-              <div class="item">
-                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/lip1.png" class="img-responsive"></a></div>
-              </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-          </div>
-        </div>
-    </section>
-  </div>
-
-  <!--end of mini slider-->
 
   <main id="main">
+    <!--Products-->
+    <section id="products" class="section-bg p-4">
+      <header class="section-header p-4"><h3 style="font-weight: bolder; color: #000364;">Our Products </h3></header>
+        <!-- Minislider -->
+        <div class="container p-4">
+          <section id="sliders">    
+              <div class="col-md-10 col-md-offset-1">
+                <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/lip2.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/liner2.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow1.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/perfume1.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/eyeshadow2.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/liner1.png" class="img-responsive"></a></div>
+                    </div>
+                    <div class="item">
+                      <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="assets/images/img/lip1.png" class="img-responsive"></a></div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+          </section>
+        </div>
+        <!--end of mini slider-->
+        <!-- Collapse -->
+        <div class="container pt-4">
+          <div class="row d-flex justify-content-between">
+            <div class="col-lg-4"><a class="btn" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a></div>
+            <div class="col-lg-4"><button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button></div>
+            <div class="col-lg-4"><button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Toggle third element</button></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  We supply Orthopedics Product, Hospital Products and Hotel Disposable products with hygiene
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  We supply and distribute a wide range of Marine safety, navigation and electronics to both leisure and commercial markets. We are one of the leading suppliers in Marine electronics and safety products. Please get in touch with us if you need assistance with finding a right product or technical solutions.
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                  We distribute and supply communication products and test equipment. Our customer oriented approach supports the customers at every stage from acquiring the requirements through to the final product delivery. Our communication background in Satellite communication, Radars, and SDRs (Software Defined Radio) is a major strength to understand customer requirements exquisitely and is an enabler to provide a solution that fits well to the requirements. This sets us apart from competition.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Collapse -->
+      </section>
+    <!--End of Products-->
 
     <!-- ======= About Section ======= -->
-    <section id="about">
+    <section id="about" class="section-bg" style="background-color: #000364;">
       <div class="container">
 
+        
         <header class="section-header">
-          <h3 style="font-weight: bolder; color: #000364;">About Us</h3>
+          <h3 style="font-weight: bolder;">About Company</h3>
         </header>
+        
 
-        <div class="row about-container">
-
+        <div class="row about-container">      
           <div class="col-lg-6 content order-lg-1 order-2">
-
-            <div class="mb-4"><button style="border-radius: 4px; background-color: #bbe3f0; border-color: #fff; width: 200px;"> <h4><span style="color: #010102; font-weight: 500;">Our Vision </span></h4></button></div>
+            <div class="mb-4"><button style="border-radius: 4px; background-color: #518DDB; border-color: #518DDB; width: 200px;"> <h4><span style="color: #010102; font-weight: 500;">Our Vision </span></h4></button></div>
 
             <div class="icon-box" data-aos-delay="100">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
@@ -352,7 +384,7 @@
       <div class="container-fluid">
 
         <div class="section-header">
-          <h3 style="font-weight: bolder; color: #000364;">Contact Us</h3>
+          <h3 style="font-weight: bolder; color: #000364;">Contact..</h3>
         </div>
 
         <div class="row">
