@@ -380,10 +380,10 @@ section {
 --------------------------------*/
 .section-header h3 {
   font-size: 36px;
-  color: #283d50;
   text-align: center;
   font-weight: 500;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .section-header p {
@@ -469,26 +469,50 @@ section {
   }
 }
 /* Products Section*/
-#products a{
-  font-size: 20px;
-  background-color: #000364;
-  color: #d2dfe6;
+#products .products-extra {
+  padding-top: 60px;
 }
-#products a:hover{
-  background-color: #A4FAF8;
-  color: #000364;
+
+#products {
+  padding: 60px 0;
 }
+
 #products button{
   font-size: 20px;
   background-color: #000364;
   color: #fff;
 }
-#products button:hover{
-  background-color: #A4FAF8;
-  color: #000364;
+#products button:hover,
+#products button .active,
+#products button .active:focus{
+  transform: translateY(-5px);
+  background-color: #0429b0;
+  border-color: #A4FAF8;
 }
+
+#products .card {
+  font-size: 17px;
+  color:#000364
+}
+
+
 /* About Us Section
 --------------------------------*/
+#about button{
+  border-radius: 5px; 
+  background-color: #007bff; 
+  border-color: #007bff; 
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+#about button:hover {
+  background-color: #4ebaf0;
+  border-color: #4ebaf0;  
+  color: #ecf5ff;
+}
+
 #about {
   padding: 60px 0;
 }
@@ -507,37 +531,6 @@ section {
   margin-bottom: 0;
 }
 
-#about .about-container .icon-box {
-  background: #fff;
-  background-size: cover;
-  padding: 0 0 30px 0;
-}
-
-#about .about-container .icon-box .icon {
-  float: left;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-#about .about-container .icon-box .icon i {
-  color: #000364;
-  font-size: 20px;
-  line-height: 0;
-}
-
-#about .about-container .icon-box:hover .icon {
-  background: #C0FDFC;
-}
-
-#about .about-container .icon-box:hover .icon i {
-  color: #000364;
-}
-
 #about .about-container .icon-box .title {
   margin-left: 80px;
   font-weight: 600;
@@ -545,16 +538,11 @@ section {
   font-size: 18px;
 }
 
-#about .about-container .icon-box .description p {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 17px;
-}
 
 #about .about-container .description {
-  margin-left: 80px;
   line-height: 24px;
   font-size: 17px;
+  color: #fff;
 }
 
 #about .about-extra {
@@ -576,33 +564,26 @@ section {
   background: #fff;
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
+  color: #000364;
 }
 
 #services .box:hover {
   transform: translateY(-5px);
 }
 
+
+#services .box p {
+  color: #000364;
+  line-height: 24px; 
+  font-size: 17px;
+}
+
 #services .title {
-  margin-left: 40px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
-#services .title a {
-  color: #111;
-}
-
-#services .box:hover .title a {
-  color: #007bff;
-}
-
-#services .description {
-  font-size: 14px;
-  margin-left: 20px;
-  line-height: 24px;
-  margin-bottom: 0;
-}
 
 /* Clients Section
 --------------------------------*/
