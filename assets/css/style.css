@@ -86,7 +86,7 @@ h6 {
   height: 80px;
   z-index: 997;
   transition: all 0.5s;
-  background: #000364;
+  background: #01084B;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
@@ -355,6 +355,9 @@ h6 {
   background-size: cover;
   padding: 200px 0 70px 0;
 }
+#hero img {
+  margin-right: 50px;
+}
 
 @media (max-width: 991px) {
   #hero {
@@ -482,17 +485,41 @@ section {
   background-color: #000364;
   color: #fff;
 }
-#products button:hover,
-#products button .active,
-#products button .active:focus{
+#products .title button:hover,
+#products .title button .active,
+#products .title button .active:focus{
   transform: translateY(-5px);
-  background-color: #0429b0;
-  border-color: #A4FAF8;
+  background-color: #4ebaf0;
+  border-color: #4ebaf0;
 }
 
-#products .card {
+#products {
+  margin-top: 30px;
+  color:#000364;
+  height: auto;
+}
+#products .title button {
+  background-color: #007bff;
+  border-radius: 10px;
+  border-color: #007bff;
+}
+#products .title {
+  font-size: 20px;
+  padding: 10px;
+}
+#products p {
   font-size: 17px;
-  color:#000364
+  line-height: 24px;
+}
+
+#products .card .title {
+  font-size: 20px;
+  margin: 20px;
+}
+#products .card p {
+  font-size: 17px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -590,24 +617,15 @@ section {
 #clients {
   padding: 60px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background-color: #000364;
 }
 
 #clients .clients-wrap {
   border-top: 1px solid #d6eaff;
   border-left: 1px solid #d6eaff;
-  margin-bottom: 30px;
-}
-
-#clients .client-logo {
-  padding: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-right: 1px solid #d6eaff;
   border-bottom: 1px solid #d6eaff;
-  overflow: hidden;
-  background: #fff;
-  height: 160px;
+  margin-bottom: 30px;
 }
 
 #clients .client-logo:hover img {
@@ -787,8 +805,11 @@ section {
 }
 
 #footer .footer-top {
-  background: #004a99;
+  background: #000364;
   padding: 60px 0 30px 0;
+}
+#footer .footer-contact p {
+  color:#000364;
 }
 
 #footer .footer-top .footer-info {
@@ -893,7 +914,7 @@ section {
 }
 
 #footer .footer-top .footer-newsletter input[type=submit] {
-  background: #007bff;
+  background: #01084B;
   border: 0;
   width: 35%;
   padding: 6px 0;
