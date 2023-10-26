@@ -9,6 +9,37 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/*Dropdown*/
+
+
+.dropdown {
+  position:absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000364;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
 body {
   background: #fff;
   color: #444;
@@ -83,44 +114,36 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  height: 70px;
   z-index: 997;
   transition: all 0.5s;
-  background: #01084B;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  background: #090B41;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-#header.header-scrolled {
-  height: 80px;
-}
-
-#header .translate {
-  padding: 0 0 0 30px;
-}
 #header .logo h1 {
-  font-size: 36px;
+  font-size: 28px;
   margin: 0;
-  padding: 0;
-  font-weight: 400;
-  letter-spacing: 3px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-@media (max-width: 991px) {
-  #header .logo h1 {
-    font-size: 28px;
-  }
 }
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #00366f;
+  color: #fff;
   text-decoration: none;
 }
 
 #header .logo img {
   padding: 0;
-  max-height: 26px;
+  margin: 0;
+  max-height: 80px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
 }
 /**
   Collapse
@@ -146,7 +169,6 @@ h6 {
 
 .navbar li {
   position: relative;
-  padding-top: 40px;
 }
 
 .navbar a,
@@ -174,30 +196,35 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #70e5f5;
+  color: #f4fbfc;
+  text-decoration: none;
 }
 
 .navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
-  top: calc(100% + 30px);
+  top: calc(100% + 5px);
   margin: 0;
-  padding: 10px 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #a9c5ce;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #105668;
   transition: 0.3s;
 }
 
-/* .navbar .dropdown ul li {
-  min-width: 10px;
-} */
+
+
+.navbar .dropdown ul li {
+  min-width: 250px;
+}
+
+.navbar .dropdown ul li:hover {
+  background-color: #a2daf5;
+}
 
 .navbar .dropdown ul a {
-  padding: 10px 20px;
+  padding: 5px 20px;
   font-size: 14px;
   text-transform: none;
 }
@@ -209,7 +236,8 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #007bff;
+  color: #0189be;
+  text-decoration: none;
 }
 
 .navbar .dropdown:hover>ul {
@@ -233,13 +261,14 @@ h6 {
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    right: -90%;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
+    right: -100%;
   }
 }
+
 
 /**
 * Mobile Navigation 
@@ -350,24 +379,96 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  position: relative;
-  background: url("../img/bg.png") center bottom no-repeat;
+  height: 70vh;
+  background: url("../img/bbbg") bottom;
   background-size: cover;
-  padding: 200px 0 70px 0;
-}
-#hero img {
-  margin-right: 50px;
+  position: relative;
+  border-bottom: 1px solid #222;
+  overflow: hidden;
 }
 
-@media (max-width: 991px) {
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 30px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  border: 2px solid #4eb478;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #4eb478;
+  border: 2px solid #4eb478;
+}
+
+@media (min-width: 1024px) {
   #hero {
-    padding: 140px 0 60px 0;
+    background-attachment: fixed;
+  }
+
+  #hero h1,
+  #hero h2 {
+    width: 50%;
   }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 768px) {
   #hero {
-    padding: 100px 0 20px 0;
+    height: 100vh;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
   }
 }
 
@@ -498,13 +599,10 @@ section {
   color:#000364;
   height: auto;
 }
-#products .title button {
-  background-color: #007bff;
-  border-radius: 10px;
-  border-color: #007bff;
-}
+
 #products .title {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 600;
   padding: 10px;
 }
 #products p {
@@ -522,22 +620,19 @@ section {
   margin-bottom: 20px;
 }
 
+#products .item .img-responsive {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
 
 /* About Us Section
 --------------------------------*/
-#about button{
-  border-radius: 5px; 
-  background-color: #007bff; 
-  border-color: #007bff; 
+#about .title{
   font-weight: 600;
   font-size: 20px;
   color: #fff;
-}
-
-#about button:hover {
-  background-color: #4ebaf0;
-  border-color: #4ebaf0;  
-  color: #ecf5ff;
 }
 
 #about {
@@ -809,7 +904,7 @@ section {
   padding: 60px 0 30px 0;
 }
 #footer .footer-contact p {
-  color:#000364;
+  color:#fff;
 }
 
 #footer .footer-top .footer-info {
@@ -821,7 +916,7 @@ section {
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #fff;
   font-weight: 400;
   letter-spacing: 3px;

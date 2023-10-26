@@ -35,205 +35,128 @@
   ======================================================== -->
   
 
-   <!-- minislider-->
-   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   
 
    <style>
-    .carousel-control     		 { width:  4%; }
-   .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
-   @media (max-width: 767px) {
-     .carousel-inner .active.left { left: -100%; }
-     .carousel-inner .next        { left:  100%; }
-     .carousel-inner .prev		 { left: -100%; }
-     .active > div { display:none; }
-     .active > div:first-child { display:block; }
-   
-   }
-   @media (min-width: 767px) and (max-width: 992px ) {
-     .carousel-inner .active.left { left: -50%; }
-     .carousel-inner .next        { left:  50%; }
-     .carousel-inner .prev		 { left: -50%; }
-     .active > div { display:none; }
-     .active > div:first-child { display:block; }
-     .active > div:first-child + div { display:block; }
-   }
-   @media (min-width: 992px ) {
-     .carousel-inner .active.left { left: -16.7%; }
-     .carousel-inner .next        { left:  16.7%; }
-     .carousel-inner .prev		 { left: -16.7%; }	
-   }
+    /*Google translate*/
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-simple img{
+    display: none !important;
+    }
+    .goog-tooltip{
+      display: none !important;
+    }
+    .goog-tooltip:hover {
+      display: none !important;
+    }
+    .goog-text-highlight{
+      background-color:#0ea5e0;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 5px;
+    }
    </style>
-   
-   <script>
-    $(document).ready(function(){
-   $('.carousel[data-type="multi"] .item').each(function(){
-     var next = $(this).next();
-     if (!next.length) {
-       next = $(this).siblings(':first');
-     }
-     next.children(':first-child').clone().appendTo($(this));
-     
-     for (var i=0;i<4;i++) {
-       next=next.next();
-       if (!next.length) {
-           next = $(this).siblings(':first');
-       }
-       
-       next.children(':first-child').clone().appendTo($(this));
-     }
-   });
-   });
-   </script>
+  
 </head>
 
 <body>
   
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div>
-      <!-- Google Translate -->
-      <div id="google_element" class="translate"></div>
-      <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-      <script>
-        function loadGoogleTranslate() {
-          new google.translate.TranslateElement(
-            {pageLanguage: 'en'},
-            "google_element"
-          );
-        }
-      </script>
+    <!--Google Translate-->
+    <div class="container-fluid" style="background-color: #090b41;">
+      <span class="navbar-nav" mr-sm-2 id="google-translate-element"></span>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            defaultLanguage: 'en',
+            pageLanguage: 'en',
+            includedLanguages: 'en,my,th',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+            multilanguagePage: true}, 'google-translate-element')
+        };
+        </script>
+        <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
-    <div class="container d-flex justify-content-between">
-      <div class="logo">
-        <!-- Uncomment below if you prefer to use an text logo -->
-        <!-- <h1><a href="index.html">NewBiz</a></h1> -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container text-center" data-aos="fade-up">
+        <img src="assets/img/bblogo.png" class="img-fluid" alt="">
       </div>
+    </section><!-- End Hero -->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href="#products">Products</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#clients">Our Clients</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> &nbsp;&nbsp;
-        </ul>
-        
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
 
-    </div>
-  </header><!-- #header -->
+        <div class="logo">
+          <!-- <h1 class="text-light"><a href="index.html"><span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BABY ANCESTOR</span></a></h1> -->
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <a href="index.html"><img src="assets/img/babyancestorlogo" alt="" class="img-fluid"></a>
+        </div>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="clearfix">
-    <div class="container-fluid">
-        <img src="assets/img/bblogo.png" class="img-responsive" alt="">
-    </div>
-  </section>
-<!-- End Hero Section -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li class="dropdown"><a href="#products"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#"><span>Medical Products</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Robo cast</a></li>
+                    <li><a href="#">Robo Split</a></li>
+                    <li><a href="#">Bliss</a></li>
+                    <li><a href="#">Facemask</a></li>
+                    <li><a href="#">Mobcap Smooth Hand Sanitizer</a></li>
+                    <li><a href="">Smooth Soap</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>IOT Solution</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Inteli Temperature Monitoring System</a></li>
+                    <li><a href="#">Tempature Standard</a></li>
+                    <li><a href="#">Smart Home</a></li>
+                    <li><a href="#">Smart Farm</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Communication Products</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Robo cast</a></li>
+                    <li><a href="#">Robo Split</a></li>
+                    <li><a href="#">Bliss</a></li>
+                    <li><a href="#">Facemask</a></li>
+                    <li><a href="#">Mobcap Smooth Hand Sanitizer</a></li>
+                    <li><a href="">Smooth Soap</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Marine Products</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Robo cast</a></li>
+                    <li><a href="#">Robo Split</a></li>
+                    <li><a href="#">Bliss</a></li>
+                    <li><a href="#">Facemask</a></li>
+                    <li><a href="#">Mobcap Smooth Hand Sanitizer</a></li>
+                    <li><a href="">Smooth Soap</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">KJB Family Farm</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#clients">clients</a></li>
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+           
+          </ul>
+          <!-- dropdown hoverable -->
+          
+          <i class="bi bi-list mobile-nav-toggle" ></i>
+        </nav><!-- .navbar -->
+
+      </div>
+    </header><!-- End Header -->
 
 
   <main id="main">
-    <!--Products-->
-    <section id="products" class="products-extra">
-      <header class="section-header p-4"><h3 style="font-weight: bolder; color: #000364;">Our Products </h3></header>
-        <!-- Minislider -->
-        <div class="container-fluid p-4">
-          <section id="sliders">    
-              <div class="col-md-10 col-md-offset-1">
-                <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic1.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic2.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic9.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic10.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic3.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic4.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic11.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic12.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic8.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic5.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic13.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic14.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic6.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic7.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic15.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic16.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic8.png" class="img-responsive"></a></div>
-                    </div>
-                    <div class="item">
-                      <div class="col-md-2 col-sm-12 col-xs-12"><a href="#"><img src="assets/img/pic17.png" class="img-responsive"></a></div>
-                    </div>
-                    
-                  </div>
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                </div>
-              </div>
-          </section>
-        </div>
-        <!--end of mini slider-->
-    
-        <!--Card-->
-        <div class="container">
-             <div class="row">
-                <div class="title"><button>Medical Products </button></div>
-                <p>We supply Orthopedics Product, Hospital Products and Hotel Disposable products with hygiene</p>
-              </div>
-              
-              <div class="row">
-                <div class="title btn-btn-info"><button>Marine Products</button></div>
-                <p>We supply and distribute a wide range of Marine safety, navigation and electronics to both leisure and commercial markets. We are one of the leading suppliers in Marine electronics and safety products. Please get in touch with us if you need assistance with finding a right product or technical solutions.</p>
-              </div>
-
-              <div class="row">
-                <div class="title"><button>Communication Products</button></div>
-                <p>We distribute and supply communication products and test equipment. Our customer oriented approach supports the customers at every stage from acquiring the requirements through to the final product delivery. Our communication background in Satellite communication, Radars, and SDRs (Software Defined Radio) is a major strength to understand customer requirements exquisitely and is an enabler to provide a solution that fits well to the requirements. This sets us apart from competition.</p>
-              </div>
-
-          </div>
-        </div>
-        <!--End of Card-->
-      </section>
-    <!--End of Products-->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="section-bg" style="background-color: #000364;">
@@ -247,7 +170,7 @@
 
         <div class="row about-container">      
           <div class="col-lg-6 content order-lg-1 order-2">
-            <div class="my-4"><button> Our Vision </button></div>
+            <div class="title my-4"> Our Vision </div>
 
               <div data-aos-delay="100">
                 <p class="description">Our vision is to deliver the best customer service and diverse quality products that include medical and communication related devices with the most reasonable price.</p>
@@ -270,7 +193,7 @@
             <img src="assets/img/m1.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-5 pt-lg-0">
-            <div class="my-4"><button> Our Team</button></div>
+            <div class="title my-4"> Our Team </div>
               <p class="description">The company consists of a small team of accredited and experienced staffs, which gives Baby Ancestor the breadth and versatility to deliver a high standard of product, within budget, in a professional and timely manner.</p>
               <p class="description"> Our staff members work on to meet the needs of our clients, who stretch throughout Myanmar as our best possible.</p>
           </div>
@@ -282,7 +205,7 @@
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-1 order-2 order-lg-1">
-            <div class="my-4 py-3"><button> Market Presentation</button></div>
+            <div class="title my-4 py-3"> Market Presentation </div>
             <p class="description">Founded in 2014, our mission is to maximize the satisfaction of customers through delivering comfortable and safe medical products with reasonable price.</p>
             <p class="description">After established and within a few months, Baby Ancestor company has distributed more than Major Private hospitals and organizations.</p>
             <p class="description">Our products are approved and appreciated in our markets for its high quality, better comfort ability with reasonable price.</p>
