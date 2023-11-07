@@ -1,7 +1,7 @@
 /**
-* Template Name: Shuffle
+* Template Name: Plato
 * Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/
+* Template URL: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -197,7 +197,7 @@
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
-      });
+      })
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -216,17 +216,17 @@
 
   });
 
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
 
   /**
-   * Initiate Pure Counter 
+   * Animation on scroll
    */
-  new PureCounter();
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  })
 
 })()

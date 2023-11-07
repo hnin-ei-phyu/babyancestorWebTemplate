@@ -9,6 +9,37 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/*Dropdown*/
+
+
+.dropdown {
+  position:absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000364;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
 body {
   background: #fff;
   color: #444;
@@ -80,47 +111,195 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
+# Product Header
 --------------------------------------------------------------*/
-#header {
-  height: 80px;
+#productheader {
+  height: 70px;
   z-index: 997;
   transition: all 0.5s;
-  background: #000364;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  background: #090B41;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-#header.header-scrolled {
-  height: 80px;
-}
-
-#header .translate {
-  padding: 0 0 0 30px;
-}
-#header .logo h1 {
-  font-size: 36px;
+#productheader .logo h1 {
+  font-size: 28px;
   margin: 0;
-  padding: 0;
-  font-weight: 400;
-  letter-spacing: 3px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-@media (max-width: 991px) {
-  #header .logo h1 {
-    font-size: 28px;
+#productheader .logo h1 a,
+#productheader .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#productheader .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 80px;
+}
+
+/**
+* Desktop Navigation 
+*/
+.nav {
+  padding: 0;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav ul li {
+  position: relative;
+  border-top: 1px solid #d6eaff;
+  border-left: 1px solid #d6eaff;
+  border-right: 1px solid #d6eaff;
+  border-bottom: 1px solid #d6eaff;
+}
+
+.nav a,
+.nav a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 0 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.nav a i,
+.nav a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.nav a:hover,
+.nav .active,
+.nav .active:focus,
+.nav li:hover>a {
+  color: #f4fbfc;
+  text-decoration: none;
+}
+
+.nav .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 5px);
+  margin: 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #105668;
+  transition: 0.3s;
+}
+
+
+
+.nav .dropdown ul li {
+  min-width: 250px;
+}
+
+.nav .dropdown ul li:hover {
+  background-color: #a2daf5;
+}
+
+.nav .dropdown ul a {
+  padding: 5px 50px;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.nav .dropdown ul a i {
+  font-size: 12px;
+}
+
+.nav .dropdown ul a:hover,
+.nav .dropdown ul .active:hover,
+.nav .dropdown ul li:hover>a {
+  color: #0189be;
+  text-decoration: none;
+}
+
+.nav .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.nav .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .nav .dropdown .dropdown ul {
+    right: -90%;
   }
+
+  .nav .dropdown .dropdown:hover>ul {
+    right: -100%;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 70px;
+  z-index: 997;
+  transition: all 0.5s;
+  background: #090B41;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #00366f;
+  color: #fff;
   text-decoration: none;
 }
 
 #header .logo img {
   padding: 0;
-  max-height: 26px;
+  margin: 0;
+  max-height: 80px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
 }
 /**
   Collapse
@@ -146,7 +325,6 @@ h6 {
 
 .navbar li {
   position: relative;
-  padding-top: 40px;
 }
 
 .navbar a,
@@ -174,30 +352,36 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #70e5f5;
+  color: #f4fbfc;
+  text-decoration: none;
 }
 
 .navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
-  top: calc(100% + 30px);
+  top: calc(100% + 5px);
   margin: 0;
-  padding: 10px 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #a9c5ce;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background-color: #3d7dc1;
   transition: 0.3s;
 }
 
-/* .navbar .dropdown ul li {
-  min-width: 10px;
-} */
+
+
+
+.navbar .dropdown ul li {
+  min-width: 250px;
+}
+
+.navbar .dropdown ul li:hover {
+  background-color: #a2daf5;
+}
 
 .navbar .dropdown ul a {
-  padding: 10px 20px;
+  padding: 5px 20px;
   font-size: 14px;
   text-transform: none;
 }
@@ -209,7 +393,8 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #007bff;
+  color: #0189be;
+  text-decoration: none;
 }
 
 .navbar .dropdown:hover>ul {
@@ -233,13 +418,14 @@ h6 {
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    right: -90%;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
+    right: -100%;
   }
 }
+
 
 /**
 * Mobile Navigation 
@@ -352,24 +538,101 @@ h6 {
 
 /*--------------------------------------------------------------
 # Hero Section
---------------------------------------------------------------*/
+----------------------------- ---------------------------------*/
 #hero {
   width: 100%;
-  position: relative;
-  background: url("../img/bg.png") center bottom no-repeat;
+  height: 55vh;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  padding: 200px 0 70px 0;
+  position: relative;
+  border-bottom: 1px solid #f5f2f2;
+  overflow: hidden;
 }
 
-@media (max-width: 991px) {
+
+#hero:before {
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 30px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: 0.5s;
+  border: 2px solid #4eb478;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #4eb478;
+  border: 2px solid #4eb478;
+}
+
+@media (min-width: 1024px) {
   #hero {
-    padding: 140px 0 60px 0;
+    background-attachment: fixed;
+  }
+
+  #hero h1,
+  #hero h2 {
+    width: 50%;
   }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 768px) {
   #hero {
-    padding: 100px 0 20px 0;
+    height: 100vh;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
   }
 }
 
@@ -385,6 +648,7 @@ section {
 --------------------------------*/
 .section-header h3 {
   font-size: 36px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-weight: 500;
   position: relative;
@@ -416,10 +680,8 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 20px 0;
   background-color: #f5faff;
   min-height: 40px;
-  margin-top: 80px;
 }
 
 @media (max-width: 992px) {
@@ -487,35 +749,53 @@ section {
   background-color: #000364;
   color: #fff;
 }
-#products button:hover,
-#products button .active,
-#products button .active:focus{
+#products .title button:hover,
+#products .title button .active,
+#products .title button .active:focus{
   transform: translateY(-5px);
-  background-color: #0429b0;
-  border-color: #A4FAF8;
+  background-color: #4ebaf0;
+  border-color: #4ebaf0;
 }
 
-#products .card {
+#products {
+  margin-top: 30px;
+  color:#000364;
+  height: auto;
+}
+
+#products .title {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px;
+}
+#products p {
   font-size: 17px;
-  color:#000364
+  line-height: 24px;
+}
+
+#products .card .title {
+  font-size: 20px;
+  margin: 20px;
+}
+#products .card p {
+  font-size: 17px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#products .item .img-responsive {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 
 /* About Us Section
 --------------------------------*/
-#about button{
-  border-radius: 5px; 
-  background-color: #007bff; 
-  border-color: #007bff; 
+#about .title{
   font-weight: 600;
   font-size: 20px;
   color: #fff;
-}
-
-#about button:hover {
-  background-color: #4ebaf0;
-  border-color: #4ebaf0;  
-  color: #ecf5ff;
 }
 
 #about {
@@ -528,7 +808,8 @@ section {
 
 #about .about-container .title {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -595,24 +876,15 @@ section {
 #clients {
   padding: 60px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background-color: #000364;
 }
 
 #clients .clients-wrap {
   border-top: 1px solid #d6eaff;
   border-left: 1px solid #d6eaff;
-  margin-bottom: 30px;
-}
-
-#clients .client-logo {
-  padding: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-right: 1px solid #d6eaff;
   border-bottom: 1px solid #d6eaff;
-  overflow: hidden;
-  background: #fff;
-  height: 160px;
+  margin-bottom: 30px;
 }
 
 #clients .client-logo:hover img {
@@ -792,8 +1064,11 @@ section {
 }
 
 #footer .footer-top {
-  background: #004a99;
+  background: #000364;
   padding: 60px 0 30px 0;
+}
+#footer .footer-contact p {
+  color:#fff;
 }
 
 #footer .footer-top .footer-info {
@@ -805,7 +1080,7 @@ section {
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #fff;
   font-weight: 400;
   letter-spacing: 3px;
@@ -898,7 +1173,7 @@ section {
 }
 
 #footer .footer-top .footer-newsletter input[type=submit] {
-  background: #007bff;
+  background: #01084B;
   border: 0;
   width: 35%;
   padding: 6px 0;
