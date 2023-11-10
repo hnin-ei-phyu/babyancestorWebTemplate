@@ -38,8 +38,10 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   
-
-   
+   <!-- minislider -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
    <style>
     /*Google translate*/
@@ -58,8 +60,56 @@
       box-shadow: none !important;
       border-radius: 5px;
     }
+
+    /* minislider */
+    .carousel-control     		 { width:  4%; }
+    .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+    @media (max-width: 767px) {
+      .carousel-inner .active.left { left: -100%; }
+      .carousel-inner .next        { left:  100%; }
+      .carousel-inner .prev		 { left: -100%; }
+      .active > div { display:none; }
+      .active > div:first-child { display:block; }
+
+    }
+    @media (min-width: 767px) and (max-width: 992px ) {
+      .carousel-inner .active.left { left: -50%; }
+      .carousel-inner .next        { left:  50%; }
+      .carousel-inner .prev		 { left: -50%; }
+      .active > div { display:none; }
+      .active > div:first-child { display:block; }
+      .active > div:first-child + div { display:block; }
+    }
+    @media (min-width: 992px ) {
+      .carousel-inner .active.left { left: -16.7%; }
+      .carousel-inner .next        { left:  16.7%; }
+      .carousel-inner .prev		 { left: -16.7%; }	
+    }
    </style>
-  
+
+   <!-- minislider -->
+    <script>
+      $(document).ready(function(){
+    $('.carousel[data-type="multi"] .item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<4;i++) {
+        next=next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        
+        next.children(':first-child').clone().appendTo($(this));
+      }
+    });
+    });
+    </script>
+    <!-- minislider -->
+    
 </head>
 
 <body>
@@ -90,21 +140,24 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-      <div class="hero-container text-center" data-aos="fade-up">
-        
-        <div id="carouselExampleSlidesOnly" class="carousel slide-container" data-bs-ride="carousel">
+      <div class="container mt-4">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/img/mainslide1.png" class="d-block w-100" alt="...">
+            <div class="carousel-item active" data-bs-interval="6000">
+              <img class="d-block w-100" src="assets/img/logoes.png" alt="...">
             </div>
-            <div class="carousel-item">
-              <img src="assets/img/intelislide1.png" class="d-block w-100" alt="...">
+            <div class="carousel-item" data-bs-interval="4000">
+              <img class="d-block w-100" src="assets/img/fm&bliss.png" alt="...">
             </div>
-            <div class="carousel-item">
-              <img src="assets/img/mainslide2.png" class="d-block w-100" alt="...">
+            <div class="carousel-item" data-bs-interval="4000">
+              <img class="d-block w-100" src="assets/img/intelislider.png" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img class="d-block w-100" src="assets/img/robocast.png" alt="...">
             </div>
           </div>
         </div>
+      </div>
         
       </div>
     </section><!-- End Hero -->
@@ -116,48 +169,45 @@
         <div class="logo">
           <!-- <h1 class="text-light"><a href="index.html"><span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BABY ANCESTOR</span></a></h1> -->
           <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html"><img src="assets/img/babyancestorlogo" alt="" class="img-fluid"></a>
+          <a href="index.html"><img src="assets/img/baby1.png" alt="" class="img-fluid"></a>
         </div>
 
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li class="dropdown"><a href=""><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a href="#"><span>Our Products</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li class="dropdown"><a href="medProducts.html"><span>Medical Products</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="#"><span>Medical & Hygiene Products</span> <i class="bi bi-chevron-right"></i></a>
                   <ul>
-                    <li><a href="medProducts.html">Robo cast</a></li>
-                    <li><a href="medProducts.html">Robo Split</a></li>
-                    <li><a href="medProducts.html">Bliss</a></li>
-                    <li><a href="medProducts.html">Facemask</a></li>
-                    <li><a href="medProducts.html">Mobcap Smooth Hand Sanitizer</a></li>
-                    <li><a href="medProducts.html">Smooth Soap</a></li>
+                    <li><a href="robocast.html">Robo cast</a></li>
+                    <li><a href="robosplint.html">Robo Split</a></li>
+                    <li><a href="bliss.html">Bliss</a></li>
+                    <li><a href="handsanitizer.html">Smooth Hand Sanitizer</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a href="iotSolution.html"><span>IOT Solution</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="#"><span>IOT Solution</span> <i class="bi bi-chevron-right"></i></a>
                   <ul>
-                    <li><a href="iotSolution.html">Inteli Temperature Monitoring System</a></li>
-                    <li><a href="iotSolution.html">Tempature Standard</a></li>
-                    <li><a href="iotSolution.html">Smart Home</a></li>
-                    <li><a href="iotSolution.html">Smart Farm</a></li>
+                    <li><a href="inteli.html">Inteli Temperature Monitoring System</a></li>
+                    <li><a href="temstand.html">Tempature Standard</a></li>
+                    <li><a href="smarthome.html">Smart Home</a></li>
+                    <li><a href="smartfarm.html">Smart Farm (KJB Family Farm)</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a href="me.html"><span>M & E Service</span> <i class="bi bi-chevron-right"></i></a>
+                <li class="dropdown"><a href="#"><span>M & E Services</span> <i class="bi bi-chevron-right"></i></a>
                   <ul>
-                    <li><a href="me.html">Construction</a></li>
-                    <li><a href="me.html">Electrical</a></li>
-                    <li><a href="me.html">Plumbing</a></li>
+                    <li><a href="construction.html">Construction</a></li>
+                    <li><a href="electrical.html">Electrical</a></li>
+                    <li><a href="plumbing.html">Plumbing</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a href=""><span>Communication Products</span></a></li>
-                <li class="dropdown"><a href=""><span>Marine Products</span></a></li>
-                <li class="dropdown"><a href=""><span>KJB Family Farm</span></a></li>
+                <li class="dropdown"><a href="#"><span>Communication Products</span></a></li>
+                <li class="dropdown"><a href="#"><span>Marine Products</span></a></li>
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto" href="#clients">clients</a></li>
-            <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+            <li><a class="nav-link scrollto" href="#clients">Our Clients</a></li>
+            <li><a class="nav-link scrollto" href="#services">Our Services</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
            
           </ul>
           <!-- dropdown hoverable -->
@@ -168,15 +218,15 @@
       </div>
     </header><!-- End Header -->
 
+    
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="section-bg" style="background-color: #000364;">
       <div class="container">
-
         
-        <header class="section-header">
+        <header class="section-header mt-4">
           <h3 style="font-weight: bolder; color: #fff;">About Company</h3>
         </header>
         
@@ -235,7 +285,7 @@
       <div class="container">
 
         <header class="section-header mb-4">
-          <h3 style="font-weight: bolder; color: #fff;">Services</h3>
+          <h3 style="font-weight: bolder; color: #fff;">Our Services</h3>
         </header>
 
         <div class="row justify-content-center">
@@ -259,12 +309,12 @@
 
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <h3 style="font-weight: bolder; color: #000364;">Our CLients</h3>
-        </div>
+        <header class="section-header mb-4">
+          <h3 style="font-weight: bolder; color: #fff;">Our Clients</h3>
+        </header>
 
         <div class="row g-0 clients-wrap clearfix">
-           <img src="assets/img/Myanmar-map-2048x1551.jpg" alt="">
+           <img src="assets/img/client.jpg" alt="">
         </div>
 
       </div>
@@ -276,14 +326,14 @@
       <div class="container-fluid">
 
         <div class="section-header">
-          <h3 style="font-weight: bolder; color: #000364;">Contact</h3>
+          <h3 style="font-weight: bolder; color: #000364;">Contact Us</h3>
         </div>
 
         <div class="row">
 
           <div class="col-lg-6">
             <div class="map mb-4 mb-lg-0">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.4097677728532!2d96.18837227385615!3d16.855612383943708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1936cff390741%3A0xa4201bfc6ec8a5f9!2sBaby%20Ancestor%20Head%20Office!5e0!3m2!1sen!2smm!4v1697426270141!5m2!1sen!2smm" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen"></iframe>
+              <img src="assets/img/officeMap.jpg" style="border:0; width: 100%; height: 400px;" alt="">
             </div>
           </div>
 
@@ -343,7 +393,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>Baby Ancestor</h3>
+            <h3>Baby Ancestor Co., Ltd.</h3>
             <p> </p>
           </div>
 
@@ -365,7 +415,7 @@
               33 Ward, North Dagon Tsp.<br>
               Yangon. Myanmar <br>
               <strong>Phone:</strong> 09965178604, 0942020960, 0942020760<br>
-              <strong>Email:</strong> info@babyancestor.com <br>
+              <strong>email:</strong> info@babyancestor.com <br>
             </p>
 
             <div class="social-links">

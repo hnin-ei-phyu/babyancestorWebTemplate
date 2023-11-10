@@ -62,17 +62,19 @@
       border-radius: 5px;
     }
 
-    /*dropdown*/
-    .dropbtn {
-      color: #000364;
+  /*dropdown*/
+  .dropbtn {
+      color: #ABF3FF;
+      background-color: rgb(42, 94, 167);
       padding: 16px;
       font-size: 16px;
       border: none;
-      border-top: 1px solid #1d242d;
-      border-left: 1px solid #1d242d;
-      border-right: 1px solid #1d242d;
-      border-bottom: 1px solid #1d242d;
+      border-top: 1px solid #ABF3FF;
+      border-left: 1px solid #ABF3FF;
+      border-right: 1px solid #ABF3FF;
+      border-bottom: 1px solid #ABF3FF;
       box-sizing: border-box;
+      border-radius: 10px;
     }
     
     .dropdown {
@@ -98,13 +100,13 @@
       display: block;
     }
     
-    .dropdown-content a:hover {background-color: #0ea5e0;}
+    .dropdown-content a:hover {background-color: #a2daf5;}
     
     .dropdown:hover .dropdown-content { 
       display: block;
     }
     
-    .dropdown:hover .dropbtn {background-color: #453e8e; color: white;}
+    .dropdown:hover .dropbtn {background-color:#a2daf5; color: #000364;}
 
     .tit-h3 {
     font-size: 2rem;
@@ -161,8 +163,6 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li> Medical&Hygiene Products</li>
-            <li><a href="iotSolution.html"> IOT Solution products</a></li>
-            <li><a href="me.html"> M & E Service</a></li>
           </ol>
         </div>
 
@@ -175,15 +175,12 @@
 
         <div class="col-lg-4 text-center">
           <div class="dropdown">
-            <a href="medProducts.html"><button class="dropbtn">Medical&Hygiene Prouducts</button></a>
+            <a href="#"><button class="dropbtn">Medical&Hygiene Prouducts</button></a>
             <div class="dropdown-content">
-              <a href="#roboCast">Robo cast</a>
-              <a href="#roboSplint">Robo Splint</a>
-              <a href="#">Bliss</a>
-              <a href="#">Facemask</a>
-              <a href="#">Mobcap Smooth </a>
-              <a href="#">Hand Sanitizer</a>
-              <a href="#">Smooth Soap</a>
+              <a href="robocast.html">Robo cast</a>
+              <a href="robosplint.html">Robo Splint</a>
+              <a href="bliss.html">Bliss</a>
+              <a href="handsanitizer.html">Smooth Hand Sanitizer</a>
             </div>
           </div>
         </div>
@@ -191,23 +188,23 @@
 
         <div class="col-lg-4 text-center">
           <div class="dropdown">
-            <a href="iotSolution.html"><button class="dropbtn">IOT Solution Products</button></a>
+            <a href="#"><button class="dropbtn">IOT Solution Products</button></a>
             <div class="dropdown-content">
-              <a href="iotSolution.html">iNteli Temperature Monitoring System</a>
-              <a href="iotSolution.html">Temperature Stand</a>
-              <a href="iotSolution.html"> Smart Home</a>
-              <a href="iotSolution.html"> Smart Farm</a>
+              <a href="inteli.html">iNteli Temperature Monitoring System</a>
+              <a href="temstand.html">Temperature Stand</a>
+              <a href="smarthome.html"> Smart Home</a>
+              <a href="smartfarm.html"> Smart Farm (KJB Family Farm)</a>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 text-center">
           <div class="dropdown">
-            <a href="me.html"><button class="dropbtn">M&E Services</button></a>
+            <a href="#"><button class="dropbtn">M&E Services</button></a>
             <div class="dropdown-content">
-              <a href="me.html"> Construction</a>
-              <a href="me.html">Electrical</a>
-              <a href="me.html">Plumbing</a>
+              <a href="construction.html"> Construction</a>
+              <a href="electrical.html">Electrical</a>
+              <a href="plumbing.html">Plumbing</a>
             </div>
           </div>
         </div>
@@ -226,6 +223,33 @@
   <div class="container">
     <h3 class="tit-h3 m-t-30 m-b-10 text-center">Advantages</h3>
 
+    <h5><span style="font-weight: 500; color: #000364;">Curing speed control</span></h5>
+      <div class="mb-4">
+        The curing speed can be controlled by the temperature and amount of water used. <br>
+      - When you feel that hardening is fast (summer): Soak the product in water for 3 to 5 seconds, then take it out, shake off the water, and apply. <br>
+      - When you feel that hardening is slow (winter): Soak the product in water and knead it 3 to 5 times, then take it out of the water and squeeze it again 2 to 3 times to remove the water before performing the treatment.
+      </div>
+      <hr>
+
+      <h5><span style="font-weight: 500; color: #000364;">S & F patented substances</span></h5>
+      <div class="mb-4">
+        RoboCast contains S&F's patented substances, so it has less stickiness during treatment and has excellent molding properties.
+      </div>
+      <hr>
+
+    <h5><span style="font-weight: 500;">Flexibility</span></h5>
+    <div class="row d-flex mb-4">
+      <div class="col-lg-4"><img src="assets/img/robo4.png" alt=""></div>
+      <div class="col-lg-6">Robocast has excellent elasticity in length, width, and diagonal directions, making it advantageous for molding curved areas of the body such as elbows and heels.</div>
+    </div>
+    <hr>
+
+    <h5><span style="font-weight: 500; color: #000364;">less pressure</span></h5>
+      <div class="mb-4">
+        Robocast polyester products have good formability due to their excellent elasticity, and because they have weak rebound and recovery force after stretching, there is a low possibility of pressure on the affected area.
+      </div>
+      <hr>
+
     <h5><span style="font-weight: 500;">Hygiene / Ventilation</span></h5>
     <div class="row d-flex mb-4">
       <div class="col-lg-4"><img src="assets/img/robo1.png" alt=""></div>
@@ -233,10 +257,10 @@
     </div>
     <hr>
 
-    <h5><span style="font-weight: 500;">Prevention of dripping</span></h5>
+    <h5><span style="font-weight: 500; color: #000364;">Prevention of dripping</span></h5>
     <div class="row d-flex mb-4">
         <div class="col-lg-2">
-          <div class="card" style="width: 12rem;">
+          <div class="card" style="width: 14rem;">
             <img class="card-img-top" src="assets/img/robo2.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Robo Cast Product</p>
@@ -244,18 +268,18 @@
           </div>
         </div>
         <div class="col-lg-2">
-          <div class="card mx-2" style="width: 12rem;">
+          <div class="card mx-2" style="width: 14rem;">
             <img class="card-img-top" src="assets/img/robo3.png" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">forming phenomenon occurred due to the dripping down of resin.</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">RoboCast contains substances to minimize resin shedding during long-term storage.</div>
+        <div class="col-lg-6 ms-4">RoboCast contains substances to minimize resin shedding during long-term storage.</div>
       </div>
       <hr>
 
-    <h5><span style="font-weight: 500;">X-ray transparency</span></h5>
+    <h5><span style="font-weight: 500; color: #000364;">X-ray transparency</span></h5>
     <div class="row d-flex mb-4">
         <div class="col-lg-2">
           <div class="card" style="width: 12rem;">
@@ -285,7 +309,7 @@
       </div>
       <hr>
 
-    <h5><span style="font-weight: 500;">small amount of dust</span></h5>
+    <h5><span style="font-weight: 500; color: #000364;">small amount of dust</span></h5>
     <div class="row d-flex mb-4">
         <div class="col-lg-2">
           <div class="card" style="width: 12rem;">
@@ -309,7 +333,7 @@
       </div>
       <hr>
 
-      <h5><span style="font-weight: 500;">environmental friendliness</span></h5>
+      <h5><span style="font-weight: 500; color: #000364;">environmental friendliness</span></h5>
       <div class="row d-flex mb-4">
       <div class="col-lg-4"><img src="assets/img/fire.png" alt=""></div>
       <div class="col-lg-6">
@@ -317,63 +341,83 @@
       </div>
       <hr>
 
+      <h5><span style="font-weight: 500; color: #000364;">Order Code</span></h5>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Size</th>
+            <th scope="col">Rolls/Box</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RC0102</td>
+            <td>2inch * 4yard (5.1cm * 3.6m)</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>RC0103</td>
+            <td>3inch * 4yard (7.6cm * 3.6m)</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>RC0104</td>
+            <td>4inch * 4yard (10.1cm * 3.6m)</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>RC0105</td>
+            <td>5inch * 4yard (12.7cm * 3.6m)</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>RC0106</td>
+            <td>6inch * 4yard (15.3cm * 3.6m)</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5><span style="font-weight: 500; color: #000364;">Color Index</span></h5>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Color</th>
+            <th scope="col">Code</th>
+            <th scope="col">Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WH</td>
+            <td>White</td>
+            <td>SB</td>
+            <td>Sky Blue</td>
+          </tr>
+          <tr>
+            <td>RD</td>
+            <td>Red</td>
+            <td>PN</td>
+            <td>Pink</td>
+          </tr>
+          <tr>
+            <td>GR</td>
+            <td>Green</td>
+            <td>PP</td>
+            <td>Purple</td>
+          </tr>
+          <tr>
+            <td>BL</td>
+            <td>Blue</td>
+            <td>YL</td>
+            <td>Yellow</td>
+          </tr>
+        </tbody>
+      </table>
+
   </div>
-</section>
-
-<section id="roboSplint">
-  <div class="container text-center">
-    <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Robo TM Splint  </span></div>
-    <div class="mb-4"><img src="assets/img/splint.png" alt="" style="width: 90%;"></div> 
-  </div>
-  <div class="container">
-
-    <h5><span style="font-weight: 500;">Roll and free cut</span></h5>
-    <div class="row d-flex mb-4">
-        <div class="col-lg-2">
-          <div class="card" style="width: 12rem;">
-            <img class="card-img-top" src="assets/img/splint1.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Robo Splint Roll Type</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="card mx-2" style="width: 12rem;">
-            <img class="card-img-top" src="assets/img/splint2.png" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">Robo Splint Pre-cut Type</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6"> The user can select and use either the roll-type splint or the precut-type splint.</div>
-      </div>
-      <hr>
-
-      <h5><span style="font-weight: 500;">Formability</span></h5>
-      <div class="row d-flex mb-4">
-          <div class="col-lg-2">
-            <div class="card" style="width: 12rem;">
-              <img class="card-img-top" src="assets/img/splint3.png" alt="Card image cap">
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="card mx-2" style="width: 12rem;">
-              <img class="card-img-top" src="assets/img/splint4.png" alt="Card image cap">
-            </div>
-          </div>
-          <div class="col-lg-6"> 
-            Robo Splint ensures excellent moldability according to the curves of human body.</div>
-      </div>
-        <hr>
-
-      <h5><span style="font-weight: 500;">Water repellent treatment</span></h5>
-      <div class="mb-4">Robo Splint is water repellent in order to prevent water penetration into the non-woven fabric that comes into contact with the skin and minimizes the exposure of the affected area or skin to moisture.</div>
-      <hr>
-
-  </div>
-
-  </div>
-
 </section>
 
 <!-- Products Details -->
@@ -388,7 +432,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>Baby Ancestor</h3>
+            <h3>Baby Ancestor Co., Ltd.</h3>
             <p> </p>
           </div>
 

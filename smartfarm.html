@@ -64,15 +64,17 @@
 
     /*dropdown*/
     .dropbtn {
-      color: #000364;
+      color: #ABF3FF;
+      background-color: rgb(42, 94, 167);
       padding: 16px;
       font-size: 16px;
       border: none;
-      border-top: 1px solid #1d242d;
-      border-left: 1px solid #1d242d;
-      border-right: 1px solid #1d242d;
-      border-bottom: 1px solid #1d242d;
+      border-top: 1px solid #ABF3FF;
+      border-left: 1px solid #ABF3FF;
+      border-right: 1px solid #ABF3FF;
+      border-bottom: 1px solid #ABF3FF;
       box-sizing: border-box;
+      border-radius: 10px;
     }
     
     .dropdown {
@@ -98,13 +100,13 @@
       display: block;
     }
     
-    .dropdown-content a:hover {background-color: #0ea5e0;}
+    .dropdown-content a:hover {background-color: #a2daf5;}
     
     .dropdown:hover .dropdown-content { 
       display: block;
     }
     
-    .dropdown:hover .dropbtn {background-color: #453e8e; color: white;}
+    .dropdown:hover .dropbtn {background-color:#a2daf5; color: #000364;}
 
     .tit-h3 {
     font-size: 2rem;
@@ -160,9 +162,7 @@
           <div><img src="assets/img/baby.png" style="width: 70px;"></div>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="medProducts.html">Medical & Hygiene products</a></li>
             <li>IOT Solution Products</li>
-            <li><a href="me.html"> M & E Service</a></li>
           </ol>
         </div>
 
@@ -175,15 +175,12 @@
 
       <div class="col-lg-4 text-center">
         <div class="dropdown">
-          <a href="medProducts.html"><button class="dropbtn">Medical&Hygiene Prouducts</button></a>
+          <a href="#"><button class="dropbtn">Medical&Hygiene Prouducts</button></a>
           <div class="dropdown-content">
-            <a href="medProducts.html">Robo cast</a>
-            <a href="medProducts.html">Robo Splint</a>
-            <a href="medProducts.html">Bliss</a>
-            <a href="medProducts.html">Facemask</a>
-            <a href="medProducts.html">Mobcap Smooth </a>
-            <a href="medProducts.html">Hand Sanitizer</a>
-            <a href="medProducts.html">Smooth Soap</a>
+            <a href="robocast.html">Robo cast</a>
+            <a href="robosplint.html">Robo Splint</a>
+            <a href="bliss.html">Bliss</a>
+            <a href="handsanitizer.html">Smooth Hand Sanitizer</a>
           </div>
         </div>
       </div>
@@ -191,23 +188,23 @@
 
       <div class="col-lg-4 text-center">
         <div class="dropdown">
-          <a href="iotSolution.html"><button class="dropbtn">IOT Solution Products</button></a>
+          <a href="#"><button class="dropbtn">IOT Solution Products</button></a>
           <div class="dropdown-content">
-            <a href="#inteli">iNteli Temperature Monitoring System</a>
-            <a href="#temstand">Temperature Stand</a>
-            <a href="#"> Smart Home</a>
-            <a href="#"> Smart Farm</a>
+            <a href="inteli.html">iNteli Temperature Monitoring System</a>
+            <a href="temstand.html">Temperature Stand</a>
+            <a href="smarthome.html"> Smart Home</a>
+            <a href="smartfarm.html"> Smart Farm (KJB Family Farm)</a>
           </div>
         </div>
       </div>
 
       <div class="col-lg-4 text-center">
         <div class="dropdown">
-          <a href="me.html"><button class="dropbtn">M&E Services</button></a>
+          <a href="#"><button class="dropbtn">M&E Services</button></a>
           <div class="dropdown-content">
-            <a href="me.html"> Construction</a>
-            <a href="me.html">Electrical</a>
-            <a href="me.html">Plumbing</a>
+            <a href="construction.html"> Construction</a>
+            <a href="electrical.html">Electrical</a>
+            <a href="plumbing.html">Plumbing</a>
           </div>
         </div>
       </div>
@@ -219,57 +216,23 @@
 <!-- Products Details -->
     <section id="inteli">
     <div class="container text-center">
-        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">iNteli Temperature Monitoring System</span></div>
-        <div class="mb-4"><img src="assets/img/intelislide2.png" alt=""></div> 
+        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">KJB Family Farm</span></div>
+        <div class="mb-4"><img src="assets/img/sfslilder.png" width="100%" alt=""></div> 
     </div> 
 
     <div class="container">
-        <h5><span style="font-weight: 500;">Automatic Temperature Sensor</span></h5>
-        <div class="row d-flex  mb-4 ">
-            <div class="col-lg-4"><img src="assets/img/inteli.png" alt=""></div>
-            <div class="col-lg-8">This device is well connected with cloud computing and automatically note the temperature chart of your goods. Perhaps, if the temperature exceeds the limitation, our device takes responsibilities to send the SMS to your staffs who takes the duty in the area. Besides, the Daily, Weekly, Monthly temperature are recorded.</div>
-        </div>
-        <hr>
-    </div>
-    </section>
-
-    <section id="temstand">
-    <div class="container text-center">
-        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Tempature Stand  </span></div>
-        <div class="card mb-4"><img src="assets/img/bblogo3 (1).png" alt="" style="width: 90%;"></div> 
-    </div>
-    <div class="container">
-
-        <h5><span style="font-weight: 500;">Automatic Temperature Sensor</span></h5>
-        <div class="row d-flex  mb-4 ">
-            <div class="col-lg-4"><img src="assets/img/temstand.png" alt=""></div>
-            <div class="col-lg-8">Our company cooperated with local ministries in order to donate our Temperature Scanner. Since Myanmar is still in the developing phase, there had been numerous issues concern with keeping the desire temperature for Covid vaccines and other essential energy intakes such as meat, fish, and frozen food during Covid era. The consequences of the failure led to many unwanted outcomes such as wastes.</div>
-        </div>
-        <hr>
-
-        <h5><span style="font-weight: 500;">PARTICIPATION DURING COVID-19 AND DEVELOPMENT</span></h5>
+        <h5><span style="font-weight: 500; color: #000364;">Our Smart Farming System</span></h5>
+          
 
         <div class="row d-flex mb-4">
-            <div class="col-lg-4">
-                <div class="card" style="width: 24rem;">
-                <img class="card-img-top" src="assets/img/inteli5.jpg" alt="Card image cap">
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 24rem;">
-                <img class="card-img-top" src="assets/img/inteli6.jpg" alt="Card image cap">
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 24rem;">
-                <img class="card-img-top" src="assets/img/inteli7.jpg" alt="Card image cap">
-                </div>
-            </div>
-        
+          <div class="col lg-6"><img src="assets/img/sf1.png" width="100%"></div>
+          <div class="col lg-6">
+            Smart farming involves the application of modern technologies, information and communication in agriculture to improve the quality and quantity of products by making them useful for human beings. In smart farming, certain technologies are used such as sensors (for water, soil, light, humidity and temperature control), software (for technical software solutions focusing on distinctive farm varieties), connectivity (for cellular), location (for GPS and satellite), robotics (for modern tractors) and data analytics (data channels for downstream solution). 
+          </div>
         </div>
         <hr>
-
     </div>
+    
     </section>
 
 <!-- Products Details -->
@@ -284,7 +247,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>Baby Ancestor</h3>
+            <h3>Baby Ancestor Co., Ltd.</h3>
             <p> </p>
           </div>
 
