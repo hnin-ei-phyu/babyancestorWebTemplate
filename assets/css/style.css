@@ -367,7 +367,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #0189be;
+  color: #000364;
   text-decoration: none;
 }
 
@@ -516,7 +516,7 @@ h6 {
 ----------------------------- ---------------------------------*/
 #hero {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   background-size:contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
