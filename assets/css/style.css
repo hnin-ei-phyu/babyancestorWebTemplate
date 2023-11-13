@@ -132,6 +132,11 @@ h6 {
 .nav ul li {
   position: relative;
   background-color: #ecf5ff;
+  border: 15px solid green;
+}
+
+.nav ul li a{
+  border: 15px solid green;
 }
 
 .nav a,
