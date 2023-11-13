@@ -39,12 +39,7 @@
   ======================================================== -->
   
 
-   
-
-
-   
-
-   <style>
+  <style>
     /*Google translate*/
     .goog-te-banner-frame.skiptranslate, .goog-te-gadget-simple img{
     display: none !important;
@@ -62,52 +57,7 @@
       border-radius: 5px;
     }
 
-    /*dropdown*/
-    .dropbtn {
-      color: #ABF3FF;
-      background-color: rgb(42, 94, 167);
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      border-top: 1px solid #ABF3FF;
-      border-left: 1px solid #ABF3FF;
-      border-right: 1px solid #ABF3FF;
-      border-bottom: 1px solid #ABF3FF;
-      box-sizing: border-box;
-      border-radius: 10px;
-    }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 250px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      border-radius: 5px;
-      z-index: 1;
-    }
-
-    
-    .dropdown-content a {
-      color: #000364;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .dropdown-content a:hover {background-color: #a2daf5;}
-    
-    .dropdown:hover .dropdown-content { 
-      display: block;
-    }
-    
-    .dropdown:hover .dropbtn {background-color:#a2daf5; color: #000364;}
-
+  
     .tit-h3 {
     font-size: 2rem;
     font-weight: 600;
@@ -132,7 +82,7 @@
   
 
     <!--Google Translate-->
-    <div class="container-fluid" style="background-color: #090b41;">
+    <div class="container-fluid" style="background-color: #ecf5ff;">
       <div class="d-flex">
         
         <div>
@@ -149,69 +99,52 @@
             };
             </script>
           </div>
-          <div><span style="color: white;"> choose language</span></div>
+          <div><span>Products</span></div>
         </div>
         <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
-
-     <!-- ======= Breadcrumbs Section ======= -->
-     <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <div><img src="assets/img/baby.png" style="width: 70px;"></div>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>IOT Solution Products</li>
-          </ol>
-        </div>
-
+    
+          <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+      
+              <div class="logo">
+                <a href="index.html"><img src="assets/img/baby1.png" alt="" class="img-fluid"></a>
+              </div>
+      
+      <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+            <li class="dropdown"><a href="#"><span>Medical & Hygiene Products</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="robocast.html"><span>Robo Cast</span></a></li>
+                  <li class="dropdown"><a href="robosplint.html"><span>Robo Splint</span> </a></li>
+                  <li class="dropdown"><a href="bliss.html"><span>Bliss</span></a></li>
+                  <li class="dropdown"><a href="handsanitizer.html"><span>Smooth Hand Sanitizer</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>IOT Solution Products</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown"><a href="inteli.html"><span>iNteli Temperature Monitoring</span></a></li>
+                <li class="dropdown"><a href="temstand.html"><span>Temperature Stand</span> </a></li>
+                <li class="dropdown"><a href="smarthome.html"><span>Smart Home</span></a></li>
+                <li class="dropdown"><a href="smartfarm.html"><span>Smart Farm(KBJ Family Farm)</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>M & E Services</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li class="dropdown"><a href="construction.html"><span>Construction</span></a></li>
+                <li class="dropdown"><a href="electrical.html"><span>Electrical</span> </a></li>
+                <li class="dropdown"><a href="plumbing.html"><span>Plumbing</span></a></li>
+              </ul>
+            </li>
+          </ul>
+            <!-- dropdown hoverable -->
+                
+            <i class="bi bi-list mobile-nav-toggle" ></i>
+        </nav><!-- .navbar -->
       </div>
-    </section><!-- Breadcrumbs Section -->
-
-<!-- Header -->
-<div id="productDetail" class="container-fluid mt-1">
-    <div class="row d-flex justify-content-center">
-
-      <div class="col-lg-4 text-center">
-        <div class="dropdown">
-          <a href="#"><button class="dropbtn">Medical&Hygiene Prouducts</button></a>
-          <div class="dropdown-content">
-            <a href="robocast.html">Robo cast</a>
-            <a href="robosplint.html">Robo Splint</a>
-            <a href="bliss.html">Bliss</a>
-            <a href="handsanitizer.html">Smooth Hand Sanitizer</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-lg-4 text-center">
-        <div class="dropdown">
-          <a href="#"><button class="dropbtn">IOT Solution Products</button></a>
-          <div class="dropdown-content">
-            <a href="inteli.html">iNteli Temperature Monitoring System</a>
-            <a href="temstand.html">Temperature Stand</a>
-            <a href="smarthome.html"> Smart Home</a>
-            <a href="smartfarm.html"> Smart Farm (KJB Family Farm)</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 text-center">
-        <div class="dropdown">
-          <a href="#"><button class="dropbtn">M&E Services</button></a>
-          <div class="dropdown-content">
-            <a href="construction.html"> Construction</a>
-            <a href="electrical.html">Electrical</a>
-            <a href="plumbing.html">Plumbing</a>
-          </div>
-        </div>
-      </div>
-    </div>      
-  </div>
-<!-- Header -->
-
+    </header><!-- End Header -->
 
 <!-- Products Details -->
     <section id="inteli">
@@ -241,12 +174,12 @@
         <h5><span style="font-weight: 500; color: #000364;">Why does Your Food Industry Need Real Time Temperature?</span></h5>
         <div class="row d-flex mb-4">
             <div class="col-lg-2">
-              <div class="card" style="width: 13rem;">
+              <div class="card" style="width: 12rem;">
                 <img class="card-img-top" src="assets/img/pic4.png" alt="Card image cap">
               </div>
             </div>
             <div class="col-lg-2">
-              <div class="card mx-2" style="width: 13rem;">
+              <div class="card mx-2" style="width: 12rem;">
                 <img class="card-img-top" src="assets/img/pic5.png" alt="Card image cap">
               </div>
             </div>
