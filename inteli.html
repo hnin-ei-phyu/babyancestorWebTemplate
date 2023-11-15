@@ -66,14 +66,66 @@
     position: relative;
     padding-left: 40px;
     color: #003e91;
-}
+    }
+    .m-b-10 {
+        margin-bottom: 1rem !important;
+    }
+    .m-t-30 {
+        margin-top: 3rem !important;
+    }
 
-.m-b-10 {
-    margin-bottom: 1rem !important;
-}
-.m-t-30 {
-    margin-top: 3rem !important;
-}
+    /*text animation*/
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+    .animation {
+      height:30px;
+      overflow:hidden;
+      margin-left: 1rem;
+    }
+
+    .animation > div > div {
+      padding: 0.25rem 0.75rem;
+      height:3.60rem;
+      margin-bottom: 2.41rem;
+      display:inline-block;
+    }
+
+    .animation div:first-child {
+      animation: text-animation 10s infinite;
+    }
+
+    .first div {
+      background-color:#fff;
+      color: green;
+    }
+
+    .second div {
+      background-color:#fff;
+      color: red;
+    }
+
+    .third div {
+      background-color:#fff;
+      color: blue;
+    }
+
+    @keyframes text-animation {
+      0% {margin-top: 0;}
+      10% {margin-top: 0;}
+      20% {margin-top: -5.62rem;}
+      30% {margin-top: -5.62rem;}
+      40% {margin-top: -11.24rem;}
+      60% {margin-top: -11.24rem;}
+      70% {margin-top: -5.62rem;}
+      80% {margin-top: -5.62rem;}
+      90% {margin-top: 0;}
+      100% {margin-top: 0;}
+    }
+
+    .col-lg-6 p {
+        line-height: 40px;
+    }
+
    </style>
   
 </head>
@@ -119,7 +171,7 @@
                 <ul>
                   <li class="dropdown"><a href="robocast.html"><span>Robo Cast</span></a></li>
                   <li class="dropdown"><a href="robosplint.html"><span>Robo Splint</span> </a></li>
-                  <li class="dropdown"><a href="bliss.html"><span>Bliss</span></a></li>
+                  <li class="dropdown"><a href="bliss.html"><span>Bliss (Face Mask)</span></a></li>
                   <li class="dropdown"><a href="handsanitizer.html"><span>Smooth Hand Sanitizer</span></a></li>
               </ul>
             </li>
@@ -147,88 +199,95 @@
     </header><!-- End Header -->
 
 <!-- Products Details -->
-    <section id="inteli">
-    <div class="container text-center">
-        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">iNteli Temperature Monitoring System</span></div>
-        <div class="mb-4"><img src="assets/img/intelislide2.png" width="100%" alt=""></div> 
+    <div class="container text-center mt-4">
+        <div class="mb-4"><img src="assets/img/intelislider.png" width="100%" alt=""></div> 
+        <hr>
     </div> 
-
+    
+    
     <div class="container">
         <h5><span style="font-weight: 500; color: #000364;">Data Storage and Security</span></h5>
-          
+
 
         <div class="row d-flex mb-4">
-          <div class="col lg-6"><img src="assets/img/network.png" width="100%"></div>
-          <div class="col lg-6">
-            Individual user security with permission Level <br>
-            Hyper Text Transfer Protocol Secure <br>
-            Data Encryption method<br>
-            Storage Data authentication method control<br>
-            Backup Data Server<br>
-            Administrative Data Policy Method<br>
-            Real TIME Data Transmission<br>
+          <div class="col-lg-10"><img src="assets/img/network.png" width="100%"></div>
+          <div class="col-lg-2">
+              <div class="animation">
+                <div class="first"><div>20.8°C normal </div></div>
+                <div class="second"><div>28.1°C	high </div></div>
+                <div class="third"><div>19.5°C	low </div></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row d-flex my-4">
+          <div class="col-lg-6"><img src="assets/img/inteli1.jpg" width="100%"></div>
+          <div class="col-lg-6">
+            <p>
+              <i class="bi bi-check2-circle"></i>  Individual user security with permission Level <br>
+              <i class="bi bi-check2-circle"></i>  Hyper Text Transfer Protocol Secure <br>
+              <i class="bi bi-check2-circle"></i>  Data Encryption method<br>
+              <i class="bi bi-check2-circle"></i>  Storage Data authentication method control<br>
+              <i class="bi bi-check2-circle"></i>  Backup Data Server<br>
+              <i class="bi bi-check2-circle"></i>  Administrative Data Policy Method<br>
+              <i class="bi bi-check2-circle"></i>  Real TIME Data Transmission<br>
+            </p>
           </div>
         </div>
         <hr>
 
         <h5><span style="font-weight: 500; color: #000364;">Why does Your Food Industry Need Real Time Temperature?</span></h5>
         <div class="row d-flex mb-4">
-            <div class="col-lg-2">
-              <div class="card" style="width: 12rem;">
-                <img class="card-img-top" src="assets/img/pic4.png" alt="Card image cap">
+            <div class="col-lg-6 d-flex">
+              <div>
+                <img class="img-fluid" src="assets/img/pic5.png" alt="Card image cap">
+              </div>
+              <div>
+                <img class="img-fluid" src="assets/img/pic4.png" alt="Card image cap">
               </div>
             </div>
-            <div class="col-lg-2">
-              <div class="card mx-2" style="width: 12rem;">
-                <img class="card-img-top" src="assets/img/pic5.png" alt="Card image cap">
-              </div>
-            </div>
-            <div class="col-lg-6 ms-4"> 
-              Importance of Food SAFETY for your customers <br>
-              Reduce the Risk of Human Error – track the Temperature Record<br>
-              Maintain proper Food Temperature <br>
-              Reduce Damage & Lost<br>
-              Refrigerant  Leaks  or malfunction<br>
-              Temperature monitoring is a matter of food safety and good business
-              
+            <div class="col-lg-6"> 
+              <p>
+                <i class="bi bi-check2-circle"></i> Importance of Food SAFETY for your customers <br>
+                <i class="bi bi-check2-circle"></i> Reduce the Risk of Human Error – track the Temperature Record<br>
+                <i class="bi bi-check2-circle"></i> Maintain proper Food Temperature <br>
+                <i class="bi bi-check2-circle"></i> Reduce Damage & Lost<br>
+                <i class="bi bi-check2-circle"></i> Refrigerant  Leaks  or malfunction<br>
+                <i class="bi bi-check2-circle"></i> Temperature monitoring is a matter of food safety and good business
+              </p>
             </div>
         </div>
           <hr>  
           
           <h5><span style="font-weight: 500; color: #000364;">Where Can We Use?</span></h5>
-        <div class="row d-flex mb-4">
-            <div class="col-lg-4">
-              <div class="card" style="width: 13rem;">
-                <img class="card-img-top" src="assets/img/car.png" alt="Card image cap">
+          <div class="row d-flex mb-4">
+            <div class="col-lg-6 d-flex">
+              <div>
+                <img class="img-fluid" src="assets/img/car.png" alt="Card image cap">
+              </div>
+              <div>
+                <img class="img-fluid" src="assets/img/cs.png" alt="Card image cap">
+              </div>
+              <div>
+                <img class="img-fluid" src="assets/img/cs1.png" alt="Card image cap">
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="card mx-1" style="width: 13rem;">
-                <img class="card-img-top" src="assets/img/cs.png" alt="Card image cap">
-              </div>
+            <div class="col-lg-6"> 
+              <p>
+                <i class="bi bi-check2-circle"></i> Medical Cold Room <br>
+                <i class="bi bi-check2-circle"></i> Laboratory Storage<br>
+                <i class="bi bi-check2-circle"></i> Cold Storage room (Meat and others) <br>
+                <i class="bi bi-check2-circle"></i> Server Rooms<br>
+                <i class="bi bi-check2-circle"></i> Warehouse for cold storage<br>
+                <i class="bi bi-check2-circle"></i> Biomolecular lab<br>
+                <i class="bi bi-check2-circle"></i> Green Plant industry<br>
+                <i class="bi bi-check2-circle"></i> Cold storage Logistics services
+              </p>
             </div>
-            <div class="col-lg-4">
-              <div class="card" style="width: 13rem;">
-                <img class="card-img-top" src="assets/img/cs1.png" alt="Card image cap">
-              </div>
-            </div>   
         </div>
-        <div class="row">
-         - Medical Cold Room <br>
-         - Laboratory Storage <br>
-         - Cold Storage room (Meat and others)<br>
-         - Server Rooms<br>
-         - Warehouse for cold storage<br>
-         - Cold storage Logistics services<br>
-         - Biomolecular lab <br>
-         - Green Plant industry
 
-        </div>
-          <hr> 
-    </div>
-    
-    </section>
 
+  </div>
 <!-- Products Details -->
 
 

@@ -50,6 +50,11 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Other Pages
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -306,7 +311,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 0 30px;
+  padding: 10px 10px 10px 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #fff;
@@ -518,7 +523,7 @@ h6 {
 ----------------------------- ---------------------------------*/
 #hero {
   width: 100%;
-  height: 60vh;
+  height: auto;
   background-size:contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -598,7 +603,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    height: 100vh;
+    height: 20vh;
   }
 
   #hero h1 {
@@ -753,6 +758,14 @@ section {
 
 #about .about-extra {
   padding-top: 60px;
+}
+#about .about-container img {
+  border: 4px solid #ddd;
+  border-radius: 4px;
+}
+
+#about .about-container img:hover {
+  box-shadow: 0 0 12px 12px rgba(0, 140, 186, 0.5);
 }
 /* Services Section
 --------------------------------*/
