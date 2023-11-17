@@ -30,6 +30,11 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- minislider -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
   <!-- =======================================================
   * Template Name: NewBiz
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -66,15 +71,66 @@
     position: relative;
     padding-left: 40px;
     color: #003e91;
-}
+  }
 
-.m-b-10 {
-    margin-bottom: 1rem !important;
-}
-.m-t-30 {
-    margin-top: 3rem !important;
-}
+  .m-b-10 {
+      margin-bottom: 1rem !important;
+  }
+  .m-t-30 {
+      margin-top: 3rem !important;
+  }
+
+  /*minislider*/
+  .carousel-control     		 { width:  4%; }
+  .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+  @media (max-width: 767px) {
+    .carousel-inner .active.left { left: -100%; }
+    .carousel-inner .next        { left:  100%; }
+    .carousel-inner .prev		 { left: -100%; }
+    .active > div { display:none; }
+    .active > div:first-child { display:block; }
+
+  }
+  @media (min-width: 767px) and (max-width: 992px ) {
+    .carousel-inner .active.left { left: -50%; }
+    .carousel-inner .next        { left:  50%; }
+    .carousel-inner .prev		 { left: -50%; }
+    .active > div { display:none; }
+    .active > div:first-child { display:block; }
+    .active > div:first-child + div { display:block; }
+  }
+  @media (min-width: 992px ) {
+    .carousel-inner .active.left { left: -16.7%; }
+    .carousel-inner .next        { left:  16.7%; }
+    .carousel-inner .prev		 { left: -16.7%; }
+
+    .carousel img {
+      border-radius: 50%;
+    }
+    }
+
    </style>
+
+<script>
+  $(document).ready(function(){
+ $('.carousel[data-type="multi"] .item').each(function(){
+   var next = $(this).next();
+   if (!next.length) {
+     next = $(this).siblings(':first');
+   }
+   next.children(':first-child').clone().appendTo($(this));
+   
+   for (var i=0;i<4;i++) {
+     next=next.next();
+     if (!next.length) {
+         next = $(this).siblings(':first');
+     }
+     
+     next.children(':first-child').clone().appendTo($(this));
+   }
+ });
+ });
+ </script>
   
 </head>
 
@@ -153,8 +209,42 @@
         <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Plumbing  </span></div>
         <div class="mb-4"><img src="assets/img/plumb.png" alt="" style="width: 100%;"></div> 
     </div>
-    <div class="container">
 
+    <!--minislider-->
+    <div class="col-md-10 col-md-offset-1">
+      <div class="carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e499e4/fff&text=1" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e477e4/fff&text=2" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f566f5/333&text=5" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=7" class="img-responsive"></a></div>
+          </div>
+          <div class="item">
+            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=8" class="img-responsive"></a></div>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </div>
+      </div>
+
+    <div class="container">
         <h5><span style="font-weight: 500; color: #000364;">Our Plumbing Services</span></h5>
         <div class="row d-flex mb-4">
         <div class="col-lg-4"><img src="assets/img/plumb1.png" alt=""></div>
