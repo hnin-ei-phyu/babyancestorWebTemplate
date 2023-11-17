@@ -66,14 +66,114 @@
     position: relative;
     padding-left: 40px;
     color: #003e91;
-}
+    }
 
-.m-b-10 {
-    margin-bottom: 1rem !important;
-}
-.m-t-30 {
-    margin-top: 3rem !important;
-}
+    .m-b-10 {
+        margin-bottom: 1rem !important;
+    }
+    .m-t-30 {
+        margin-top: 3rem !important;
+    }
+    .col-lg-6 p {
+        line-height: 40px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-item .portfolio-wrap {
+      overflow: hidden;
+      position: relative;
+      border-radius: 6px;
+      margin: 0;
+    }
+
+    .portfolio-item .portfolio-wrap:hover img {
+      opacity: 0.4;
+      transition: 0.3s;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      transition: 0.2s linear;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info h4 {
+      font-size: 22px;
+      line-height: 1px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 0;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info h4 a {
+      color: #fff;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
+      color: #007bff;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info p {
+      padding: 0;
+      margin: 0;
+      color: #e2effe;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
+    .portfolio-item .portfolio-wrap .portfolio-info .link-details {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      background: #007bff;
+      border-radius: 50%;
+      margin: 10px 4px 0 4px;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
+    .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
+      font-size: 22px;
+      color: #fff;
+      line-height: 0;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
+    .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
+      background: #3395ff;
+    }
+
+    .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
+    .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
+      color: #fff;
+    }
+
+    .portfolio-item .portfolio-wrap:hover {
+      background: #003166;
+    }
+
+    .portfolio-item .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+
    </style>
   
 </head>
@@ -155,28 +255,122 @@
     </div>
     <div class="container">
 
-        <h5><span style="font-weight: 500; color: #000364;">Electrical Services</span></h5>
+        <h5><span style="font-weight: 500; color: #000364;">Electrical Installation</span></h5>
         <div class="row d-flex mb-4">
-        <div class="col-lg-4"><img src="assets/img/ele1.png" alt=""></div>
-        <div class="col-lg-6">
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Design and fabrication of Main Switch Boards, Synchronizing Panel, Motor Control Centre & switchgear and Power Distribution Boards.</p>
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> High / Medium Voltage Distribution</p>
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Generator Synchronizing, Load Sharing and Load Test </p>
+          <div class="col-lg-6"><img src="assets/img/ele1.png" alt=""></div>
+          <div class="col-lg-6">
+            <p>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Prevent to the electrical shock <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> High Efficiency lighting <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Earthling system & lighting protection<br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Whole Home Surge Protection <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Divided Between main panel & sub panel <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Physical check to existing electrical consumption and capacity <br>
+            </p>
+          </div>
         </div>
+        <div class="row d-flex mb-2">
+          <div class="col-lg-6">
+            <p>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Braker Rating Calculation and Cable sizes<br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Fire Alarm <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Wiring Upgrade <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> BackUp Power <br>
+              <i class="bi bi-lightbulb-fill" style="color: #0ea5e0;"></i> Using Electrical Devices Inspection (Switches, loose connection, Outlets, Isolator and other Electrical Equipment Fluorescent, Downlight and others)<br>
+            </p>
+          </div>
+          <div class="col-lg-6"><img src="assets/img/ele2.png" alt=""></div>
         </div>
-
-        <div class="row d-flex mb-4">
-            <div class="col-lg-4"><img src="assets/img/ele2.png" alt=""></div>
-            <div class="col-lg-6">
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Power Management System</p>
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Troubleshooting of Electrical and Electronic Equipment and Systems</p>
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Design engineering, modification and interfacing of electrical and electronic controls for Equipment and systems</p>
-            </div>
-            </div>
         <hr>
 
-    </div>
+        <div class="row d-flex my-4" data-aos="fade-up" data-aos-delay="200">
 
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e1.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e2.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e3.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e4.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e4.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex my-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e5.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e5.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e6.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e6.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e7.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e7.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/e8.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/e8.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
     </div>
 
     </section>

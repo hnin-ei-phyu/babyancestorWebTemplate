@@ -79,6 +79,7 @@
   .m-t-30 {
       margin-top: 3rem !important;
   }
+   
 
   /*minislider*/
   .carousel-control     		 { width:  4%; }
@@ -105,8 +106,21 @@
     .carousel-inner .prev		 { left: -16.7%; }
 
     .carousel img {
+      padding : 40px 0px;
       border-radius: 50%;
     }
+    .carousel img:hover {
+      transform: scale(1.1); 
+    }
+    .carousel img:hover  .item-info {
+      background: rgba(0, 62, 128, 0.7);
+      opacity: 1;
+      transition: 0.4s;
+    }
+    }
+
+    .col-lg-6 p {
+        line-height: 40px;
     }
 
    </style>
@@ -120,7 +134,7 @@
    }
    next.children(':first-child').clone().appendTo($(this));
    
-   for (var i=0;i<4;i++) {
+   for (var i=0;i<2;i++) {
      next=next.next();
      if (!next.length) {
          next = $(this).siblings(':first');
@@ -204,75 +218,67 @@
 
 <!-- Products Details -->
 
-<section id="plumbing">
     <div class="container text-center">
-        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Plumbing  </span></div>
+        <div class="m-4"><span style="color: #003e91; font-size: 2rem; font-weight: 800; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Plumbing Services & Sanitary Services  </span></div>
         <div class="mb-4"><img src="assets/img/plumb.png" alt="" style="width: 100%;"></div> 
     </div>
 
-    <!--minislider-->
-    <div class="col-md-10 col-md-offset-1">
-      <div class="carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e499e4/fff&text=1" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/e477e4/fff&text=2" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f566f5/333&text=5" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/eeeeee&text=7" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=8" class="img-responsive"></a></div>
-          </div>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-      </div>
-      </div>
-
     <div class="container">
-        <h5><span style="font-weight: 500; color: #000364;">Our Plumbing Services</span></h5>
-        <div class="row d-flex mb-4">
-        <div class="col-lg-4"><img src="assets/img/plumb1.png" alt=""></div>
+      <div class="row">
         <div class="col-lg-6">
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Industrial gas , compressed air distribution</p>
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Hot Water Heating and Circulation System</p>
-           <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Domestic Hot and Cold water Distribution </p>
+          <p>
+            <i class="bi bi-tools"></i> Existing plumbing system status bi-check-circle <br>
+            <i class="bi bi-tools"></i> Water supply system checking <br>
+            <i class="bi bi-tools"></i> Internal plumbing system leakage check<br>
+            <i class="bi bi-tools"></i> Drains and valves checking <br>
+            <i class="bi bi-tools"></i> Water closet checking<br>
+            </p>
         </div>
+        <div class="col-lg-6">
+          <p>
+            <i class="bi bi-tools"></i> Sanitary Drainage <br>
+            <i class="bi bi-tools"></i> Vent Piping Systerm <br>
+            <i class="bi bi-tools"></i> New Plumbing Work<br>
+            <i class="bi bi-tools"></i> Water supply system <br>
+            <i class="bi bi-tools"></i> Low Pressure Water<br>
+          </p>
         </div>
-
-        
-        <div class="row d-flex mb-4">
-            <div class="col-lg-4"><img src="assets/img/plumb2.png" alt=""></div>
-            <div class="col-lg-6">
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Fire protection , and pumping systems</p>
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Oil /water separation & polishing</p>
-               <p><i class="bi bi-check-circle" style="color: #0ea5e0;"></i> Fuel storage , Distribution and dispensing</p>
-            </div>
-            </div>
-        <hr>
-
+      </div>
     </div>
 
+    <!--minislider-->
+    <div class="container">
+          <div class="carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w1.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w2.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w3.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w4.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w5.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w6.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w7.png" class="img-responsive"></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-3 col-sm-6 col-xs-12"><a href="#"><img src="assets/img/w8.png" class="img-responsive"></a></div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
     </div>
-
-</section>
-
-<!-- Products Details -->
 
 
 
