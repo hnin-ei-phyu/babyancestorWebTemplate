@@ -294,6 +294,7 @@ h6 {
 
 .navbar li {
   position: relative;
+  padding-top: 10px;
 }
 
 .navbar a,
@@ -345,11 +346,6 @@ h6 {
 .navbar .dropdown ul li {
   min-width: 250px;
   min-height: 50px;
-<<<<<<< HEAD
-  padding: 10px;
-=======
-  padding-top: 10px;
->>>>>>> 49505021111fac40f220502b261f5f24d1c24302
 }
 
 .navbar .dropdown ul li:hover {

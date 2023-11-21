@@ -66,14 +66,111 @@
     position: relative;
     padding-left: 40px;
     color: #003e91;
-}
+    }
 
-.m-b-10 {
-    margin-bottom: 1rem !important;
-}
-.m-t-30 {
-    margin-top: 3rem !important;
-}
+    .m-b-10 {
+        margin-bottom: 1rem !important;
+    }
+    .m-t-30 {
+        margin-top: 3rem !important;
+    }
+
+    /* photo*/
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .portfolio-item .portfolio-wrap {
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px;
+        margin: 0;
+      }
+
+      .portfolio-item .portfolio-wrap:hover img {
+        opacity: 0.4;
+        transition: 0.3s;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        opacity: 0;
+        transition: 0.2s linear;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info h4 {
+        font-size: 22px;
+        line-height: 1px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        padding-bottom: 0;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info h4 a {
+        color: #fff;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
+        color: #007bff;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info p {
+        padding: 0;
+        margin: 0;
+        color: #e2effe;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info .link-preview,
+      .portfolio-item .portfolio-wrap .portfolio-info .link-details {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        width: 36px;
+        height: 36px;
+        background: #007bff;
+        border-radius: 50%;
+        margin: 10px 4px 0 4px;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info .link-preview i,
+      .portfolio-item .portfolio-wrap .portfolio-info .link-details i {
+        font-size: 22px;
+        color: #fff;
+        line-height: 0;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover,
+      .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover {
+        background: #3395ff;
+      }
+
+      .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
+      .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
+        color: #fff;
+      }
+
+      .portfolio-item .portfolio-wrap:hover {
+        background: #003166;
+      }
+
+      .portfolio-item .portfolio-wrap:hover .portfolio-info {
+        opacity: 1;
+      }
    </style>
   
 </head>
@@ -164,6 +261,94 @@
           </div>
         </div>
         <hr>
+
+        <div class="row d-flex my-4" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f1.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f1.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f2.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f3.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f3.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f4.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f4.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex my-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f5.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f5.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f6.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f6.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f7.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f7.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/f8.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div>
+                  <a href="assets/img/f8.png" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
     </div>
     
     </section>
