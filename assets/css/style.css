@@ -344,6 +344,8 @@ h6 {
 
 .navbar .dropdown ul li {
   min-width: 250px;
+  min-height: 50px;
+  padding: 10px;
 }
 
 .navbar .dropdown ul li:hover {
