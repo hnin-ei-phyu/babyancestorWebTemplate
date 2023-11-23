@@ -94,113 +94,135 @@
     }
     
     /* photo*/
-    /*--------------------------------------------------------------
-    # Portfolio
-    --------------------------------------------------------------*/
-    .portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 25px auto;
-    list-style: none;
-    text-align: center;
-    border-radius: 50px;
-    }
+    /*
 
-    .portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #0b2341;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-    }
+Full-page view:
 
-    .portfolio #portfolio-flters li:hover,
-    .portfolio #portfolio-flters li.filter-active {
-    color: #ed502e;
-    }
+https://codepen.io/GeorgePark/full/gegavO/
 
-    .portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
-    }
+*/
 
-    .portfolio .portfolio-item {
-    margin-bottom: 30px;
-    }
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
-    .portfolio .portfolio-item .portfolio-info {
-    opacity: 0;
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 0;
-    z-index: 3;
-    transition: all ease-in-out 0.3s;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    }
+:root {
+	/* Base font size */
+	font-size: 10px;
 
-    .portfolio .portfolio-item .portfolio-info h4 {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 600;
-    color: #0b2341;
-    }
+	/* Border color variable */
+	--border-color: #e70;
+}
 
-    .portfolio .portfolio-item .portfolio-info p {
-    color: #1a5298;
-    font-size: 14px;
-    margin-bottom: 0;
-    }
+* {
+	box-sizing: border-box;
+}
 
-    .portfolio .portfolio-item .portfolio-info .preview-link,
-    .portfolio .portfolio-item .portfolio-info .details-link {
-    position: absolute;
-    right: 40px;
-    font-size: 24px;
-    top: calc(50% - 18px);
-    color: #123a6d;
-    }
 
-    .portfolio .portfolio-item .portfolio-info .preview-link:hover,
-    .portfolio .portfolio-item .portfolio-info .details-link:hover {
-    color: #ed502e;
-    }
+h1 {
+	font-size: 4rem;
+}
 
-    .portfolio .portfolio-item .portfolio-info .details-link {
-    right: 10px;
-    }
+h2 {
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
 
-    .portfolio .portfolio-item .portfolio-links {
-    opacity: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 3;
-    position: absolute;
-    transition: all ease-in-out 0.3s;
-    }
+.cube-container {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	margin: 5rem auto 6rem;
+	perspective: 100rem;
+}
 
-    .portfolio .portfolio-item .portfolio-links a {
-    color: #fff;
-    margin: 0 2px;
-    font-size: 28px;
-    display: inline-block;
-    transition: 0.3s;
-    }
+.cube {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s cubic-bezier(0.32, 0.05, 0.35, 1.6);
+}
 
-    .portfolio .portfolio-item .portfolio-links a:hover {
-    color: #f59f8c;
-    }
+.cube-face-image {
+	display: block;
+	position: absolute;
+	/* opacity: 0.95; */
+	/* border: 0.2rem solid #fafafa; */
+	box-shadow: 0 0 0.5rem #fff, 
+				0 0 1.5rem var(--border-color),
+				0 0 3rem var(--border-color);
+}
 
-    .portfolio .portfolio-item:hover .portfolio-info {
-    opacity: 1;
-    bottom: 20px;
-    }
+.image-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 1.5rem;
+	justify-content: center;
+}
 
+.image-buttons input {
+	border: 0.2rem solid #fafafa;
+}
+
+.image-buttons input:focus {
+	outline: none;
+	border: 0.2rem solid var(--border-color);
+}
+
+/* Transform images to create cube */
+
+.image-1 {
+	transform: translateZ(15rem);
+}
+
+.image-2 {
+	transform: rotateX(-180deg) translateZ(15rem);
+}
+
+.image-3 {
+	transform: rotateY(90deg) translateZ(15rem);
+}
+
+.image-4 {
+	transform: rotateY(-90deg) translateZ(15rem);
+}
+
+.image-5 {
+	transform: rotateX(90deg) translateZ(15rem);
+}
+
+.image-6 {
+	transform: rotateX(-90deg) translateZ(15rem);
+}
+
+/* Transform cube to show correct image */
+
+.cube.initial-position {
+	transform: translateZ(-15rem) translateY(-2rem) rotateX(-15deg) rotateY(18deg) rotateZ(2deg);
+}
+
+.cube.show-image-1 {
+	transform: translateZ(-15rem);
+}
+
+.cube.show-image-2 {
+	transform: translateZ(-15rem) rotateX(180deg);
+}
+
+.cube.show-image-3 {
+	transform: translateZ(-15rem) rotateY(-90deg);
+}
+
+.cube.show-image-4 {
+	transform: translateZ(-15rem) rotateY(90deg);
+}
+
+.cube.show-image-5 {
+	transform: translateZ(-15rem) rotateX(-90deg);
+}
+
+.cube.show-image-6 {
+	transform: translateZ(-15rem) rotateX(90deg);
+}
 
 
    </style>
@@ -246,7 +268,7 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-            <li style="color: skyblue;">/ Our Achievements</li>
+            <li style="color: skyblue;">/ Our Milestones</li>
           <!-- dropdown hoverable -->
           
           <i class="bi bi-list mobile-nav-toggle" ></i>
@@ -259,102 +281,49 @@
 <!-- Main content-->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Portfolio</h2>
-            <p>This is our milestone during covid-19</p>
-          </div>
-  
-          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="assets/img/ac.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <a href="assets/img/ac.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <img src="assets/img/ac1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <a href="assets/img/ac1.png"data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="assets/img/ac6.png"class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <a href="assets/img/ac6.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <img src="assets/img/ac3.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <a href="assets/img/ac3.png"data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <img src="assets/img/ac4.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <a href="assets/img/ac4.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="assets/img/ac5.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <a href="assets/img/ac5.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <img src="assets/img/ac2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <a href="assets/img/ac2.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <img src="assets/img/ac7.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <a href="assets/img/ac7.png"data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-plus"></i></a>
-              </div>
-            </div>
+    
 
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="assets/img/ac8.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Card 3</h4>
-                  <p>Card</p>
-                  <a href="assets/img/ac8.png"data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
+    <div class="container">
+      <h1>3D Cube Image Gallery</h1>
+        <div class="cube-container">
+
+          <div class="cube initial-position">
+
+            <img class="cube-face-image image-1" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=300&h=300&fit=crop">
+            
+            <img class="cube-face-image image-2" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=300&h=300&fit=crop">
+            
+            <img class="cube-face-image image-3" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=300&h=300&fit=crop">
+            
+            <img class="cube-face-image image-4" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=300&h=300&fit=crop">
+            
+            <img class="cube-face-image image-5" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=300&h=300&fit=crop">
+            
+            <img class="cube-face-image image-6" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=300&h=300&fit=crop">
+
           </div>
-  
+
         </div>
-      </section><!-- End Portfolio Section -->
+
+        <h2>Click the images below to rotate the cube</h2>
+
+        <div class="image-buttons d-flex">
+
+          <input type="image" class="show-image-1" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=100&h=100&fit=crop"></input>
+
+          <input type="image" class="show-image-2" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=100&h=100&fit=crop"></input>
+
+          <input type="image" class="show-image-3" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=100&h=100&fit=crop"></input>
+
+          <input type="image" class="show-image-4" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=100&h=100&fit=crop"></input>
+
+          <input type="image" class="show-image-5" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=100&h=100&fit=crop"></input>
+
+          <input type="image" class="show-image-6" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=100&h=100&fit=crop"></input>
+
+        </div>
+    </div>
+
 
 <!-- End of manin content-->
 
@@ -448,43 +417,36 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-      /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-      });
+    //DOM load event
+window.addEventListener("DOMContentLoaded",	() => {
+	
+	const cube = document.querySelector(".cube"),
+		  imageButtons = document.querySelector(".image-buttons");
+	let cubeImageClass = cube.classList[1];
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+	//Add click event listener to image buttons container
+	imageButtons.addEventListener("click", e => {
+		
+		//Get node type and class value of clicked element
+		const targetNode = e.target.nodeName,
+			  targetClass = e.target.className;
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
+		//Check if image input has been clicked and isn't the currently shown image
+		if (targetNode === "INPUT" && targetClass !== cubeImageClass) {
+			
+			console.log(`Show Image: ${targetClass.charAt(11)}`);
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
+			//Replace previous cube image class with new class
+			cube.classList.replace(cubeImageClass, targetClass);
 
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
+			//Update cube image class variable with new class
+			cubeImageClass = targetClass;	
+			
+		}
+		
+	});
+	
+});
 
   </script>
 
