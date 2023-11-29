@@ -1,10 +1,44 @@
 /**
-* Template Name: NewBiz
+* Template Name: Plato
 * Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+* Template URL: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+/*--------------------------------------------------------------
+# Product Header
+--------------------------------------------------------------*/
+#productheader {
+  height: 70px;
+  z-index: 997;
+  transition: all 0.5s;
+  background: #090B41;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#productheader .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#productheader .logo h1 a,
+#productheader .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#productheader .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 80px;
+}
+
+
 
 /*--------------------------------------------------------------
 # General
@@ -88,152 +122,13 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Product Header
+# Disable AOS delay on mobile
 --------------------------------------------------------------*/
-#productheader {
-  height: 70px;
-  z-index: 997;
-  transition: all 0.5s;
-  background: #090B41;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-#productheader .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-#productheader .logo h1 a,
-#productheader .logo h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-#productheader .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 80px;
-}
-
-/**
-* Desktop Navigation 
-*/
-.nav {
-  padding: 0;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.nav a,
-.nav a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0 0 30px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.nav a i,
-.nav a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.nav a:hover,
-.nav .active,
-.nav .active:focus,
-.nav li:hover>a {
-  color: #f4fbfc;
-  text-decoration: none;
-}
-
-.nav .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: calc(100% + 5px);
-  margin: 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-}
-
-
-
-.nav .dropdown ul li {
-  min-width: 250px;
-  border-radius: 5px;
-}
-
-.nav .dropdown ul li:hover {
-  background-color: #a2daf5;
-}
-
-.nav .dropdown ul a {
-  padding: 5px 50px;
-  font-size: 14px;
-  text-transform: none;
-}
-
-.nav .dropdown ul a i {
-  font-size: 12px;
-}
-
-.nav .dropdown ul a:hover,
-.nav .dropdown ul .active:hover,
-.nav .dropdown ul li:hover>a {
-  color: #0189be;
-  text-decoration: none;
-}
-
-.nav .dropdown:hover>ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-.nav .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-
-.nav .dropdown .dropdown:hover>ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-
-@media (max-width: 1366px) {
-  .nav .dropdown .dropdown ul {
-    right: -90%;
-  }
-
-  .nav .dropdown .dropdown:hover>ul {
-    right: -100%;
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
   }
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Header
@@ -242,7 +137,7 @@ h6 {
   height: 70px;
   z-index: 997;
   transition: all 0.5s;
-  background: #090B41;
+  background: #01084B;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -270,10 +165,7 @@ h6 {
 .scrolled-offset {
   margin-top: 70px;
 }
-/**
-  Collapse
-**/
-#accordion 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -294,7 +186,6 @@ h6 {
 
 .navbar li {
   position: relative;
-  padding-top: 10px;
 }
 
 .navbar a,
@@ -302,11 +193,10 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px 10px 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  color: #fff;
+  padding: 10px 0 10px 30px;
+  font-size: 16px;
   font-weight: 500;
+  color: #fff;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -322,41 +212,32 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #f4fbfc;
-  text-decoration: none;
+  color: #27a5cf;
 }
 
 .navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
-  top: calc(100% + 5px);
+  top: calc(100% + 30px);
   margin: 0;
+  padding: 10px 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background-color: #fafafb;
-  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
 
-
-
-
 .navbar .dropdown ul li {
-  min-width: 250px;
-  min-height: 50px;
-}
-
-.navbar .dropdown ul li:hover {
-  background-color: #a2daf5;
+  min-width: 200px;
 }
 
 .navbar .dropdown ul a {
-  padding: 5px 20px;
-  font-size: 14px;
-  text-transform: none;
-  color: #000364;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #444444;
 }
 
 .navbar .dropdown ul a i {
@@ -366,8 +247,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #000364;
-  text-decoration: none;
+  color: #27a5cf;
 }
 
 .navbar .dropdown:hover>ul {
@@ -391,32 +271,28 @@ h6 {
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    right: -90%;
+    left: -90%;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    right: -100%;
+    left: -100%;
   }
 }
-
 
 /**
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #58716d;
+  color: #fff;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
+  margin-right: 50px;
 }
 
-.mobile-nav-toggle.bi-x {
-  color: #635d5d;
-}
-
-@media (max-width: 991px) {
+@media (max-width: 491px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -433,8 +309,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(21, 27, 26, 0.8);
-  transition: 0.3s;
+  background: #01084B;
   z-index: 999;
 }
 
@@ -461,18 +336,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #58716d;
+  color: #444444;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bbca3;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
+  color: #27a5cf;
 }
 
 .navbar-mobile .dropdown ul {
@@ -481,7 +351,6 @@ h6 {
   margin: 10px 20px;
   padding: 10px 0;
   z-index: 99;
-  opacity: 1;
   visibility: visible;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
@@ -489,7 +358,6 @@ h6 {
 
 .navbar-mobile .dropdown ul li {
   min-width: 200px;
-  border-radius: 5px;
 }
 
 .navbar-mobile .dropdown ul a {
@@ -503,7 +371,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #1bbca3;
+  color: #27a5cf;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -512,103 +380,130 @@ h6 {
 
 /*--------------------------------------------------------------
 # Hero Section
------------------------------ ---------------------------------*/
+--------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: auto;
-  background-size:contain;
+  height: 65vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size:auto;
   position: relative;
   border-bottom: 1px solid #f5f2f2;
   overflow: hidden;
 }
 
-
 #hero:before {
   content: "";
   background: white;
-  position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
 
-#hero .hero-container {
+
+#hero .carousel,
+#hero .carousel-inner,
+#hero .carousel-item::before {
   position: absolute;
-  bottom: 0;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-item {
+  background-size:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+#hero .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
+  position: absolute;
+  bottom: 0;
+  top: 70px;
+  left: 50px;
+  right: 50px;
 }
 
-#hero h1 {
-  margin: 0 0 30px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
+#hero .container {
+  text-align: center;
 }
 
 #hero h2 {
-  color: #eee;
-  margin-bottom: 40px;
-  font-size: 22px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 2px;
-  display: inline-block;
-  padding: 10px 28px;
-  border-radius: 5px;
-  transition: 0.5s;
-  border: 2px solid #4eb478;
+#hero p {
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
-  background: #4eb478;
-  border: 2px solid #4eb478;
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-
-  #hero h1,
-  #hero h2 {
-    width: 50%;
-  }
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
 }
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+
 
 @media (max-width: 768px) {
   #hero {
     height: 20vh;
   }
 
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
 
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+
+  #hero .carousel-container {
+    top: 8px;
   }
 }
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+
+
 
 
 /*--------------------------------------------------------------
