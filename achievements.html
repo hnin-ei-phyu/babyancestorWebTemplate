@@ -90,14 +90,6 @@
     }
     
     /* photo*/
-    .box{
-    width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 10px;
-    margin: 0 auto;
-    padding: 10px 10px 10px 10px;
-  }
   .card{
     position: relative;
     width: 300px;
@@ -106,7 +98,9 @@
     margin: 0 auto;
     border-radius: 4px;
     box-shadow:0 2px 10px rgba(0,0,0,.2);
-    margin: 20px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
   .card:before,
   .card:after
@@ -211,114 +205,167 @@
         <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 
-      <!-- ======= Header ======= -->
-    <header id="header" class="d-flex align-items-center">
-      <div class="container d-flex align-items-center justify-content-between">
+       <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-        <div class="logo">
-          <!-- <h1 class="text-light"><a href="index.html"><span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BABY ANCESTOR</span></a></h1> -->
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html"><img src="assets/img/baby1.png" alt="" class="img-fluid"></a>
-        </div>
-
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <!-- dropdown hoverable -->
-          
-          <i class="bi bi-list mobile-nav-toggle" ></i>
-        </nav><!-- .navbar -->
-
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BABY ANCESTOR</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html"><img src="assets/img/baby1.png" alt="" class="img-fluid"></a>
       </div>
-    </header><!-- End Header -->
 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Our Products</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Medical & Hygiene Products</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="robocast.html">Robo cast</a></li>
+                  <li><a href="robosplint.html">Robo Split</a></li>
+                  <li><a href="bliss.html">Bliss (Face Mask)</a></li>
+                  <li><a href="handsanitizer.html">Smooth Hand Sanitizer</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href=""><span>IOT Solution</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="inteli.html">iNteli Temperature Mornitoring System</a></li>
+                  <li><a href="temstand.html">Temperature Stand</a></li>
+                  <li><a href="smarthome.html">Smart Home</a></li>
+                  <li><a href="smartfarm.html">Smart Farm (KJB Family Farm)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>M & E Services</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="construction.html">Construction</a></li>
+                  <li><a href="electrical.html">Electrical</a></li>
+                  <li><a href="plumbing.html">Plumbing</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Communication Products</span></a></li>
+              <li class="dropdown"><a href="#"><span>Marine Products</span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="index.html#clients">Our Clients</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Our Services</a></li>
+          <li><a class="nav-link scrollto" href="achievements.html">Our High-Profile Projects</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact Us</a></li>
+        
+        </ul>
+        <!-- dropdown hoverable -->
+        
+        <i class="bi bi-list mobile-nav-toggle" ></i>
+        
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
 
 <!-- Main content-->
 
 <div class="tit-h3 my-4">Our High-Profile Projects</div>
-<div class="box">
 
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-      <img src="assets/img/fm1.png" alt="images">
+  <div class="row">
+
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/fm1.png" alt="images">
+        </div>
+        <div class="details">
+          <h2>Bliss(Face mask)</span></h2>
+        </div>
+      </div>
     </div>
-    <div class="details">
-      <h2>Bliss(Face mask)</span></h2>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/fm2.png" alt="images">
+        </div>
+        <div class="details">
+          <h2>Bliss(Face mask)</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/fm3.png" alt="images">
+        </div>
+        <div class="details">
+          <h2>Bliss(Face mask)</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/hs1.png" alt="images">
+        </div>
+        <div class="details">
+          <h2>Smooth Hand Sanitizer</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/hs2.png" alt="images">
+        </div>
+        <div class="details">
+          <h2>Smooth Hand Sanitizer</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+            <img src="assets/img/inteli5.jpg" alt="images">
+        </div>
+        <div class="details">
+            <h2>Temperature Stand</span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/ac3.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Temperature Stand</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/ac5.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Temperature Stand</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card" data-aos="fade-up">
+        <div class="imgBx">
+          <img src="assets/img/ac9.jpg" alt="images">
+        </div>
+        <div class="details">
+          <h2>Disinfectant Chamber</span></h2>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-      <img src="assets/img/fm2.png" alt="images">
-    </div>
-    <div class="details">
-      <h2>Bliss(Face mask)</span></h2>
-    </div>
-  </div>
-
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-      <img src="assets/img/fm3.png" alt="images">
-    </div>
-    <div class="details">
-      <h2>Bliss(Face mask)</h2>
-    </div>
-  </div>
-
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-      <img src="assets/img/hs1.png" alt="images">
-    </div>
-    <div class="details">
-      <h2>Smooth Hand Sanitizer</h2>
-    </div>
-  </div>
-
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-      <img src="assets/img/hs2.png" alt="images">
-    </div>
-    <div class="details">
-      <h2>Smooth Hand Sanitizer</h2>
-    </div>
-  </div>
-
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-        <img src="assets/img/inteli5.jpg" alt="images">
-    </div>
-    <div class="details">
-        <h2>Temperature Stand</span></h2>
-    </div>
-  </div>
-
-   <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-       <img src="assets/img/ac3.jpg" alt="images">
-    </div>
-    <div class="details">
-       <h2>Temperature Stand</span></h2>
-     </div>
-  </div>
-
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-       <img src="assets/img/ac5.jpg" alt="images">
-    </div>
-    <div class="details">
-       <h2>Temperature Stand</span></h2>
-     </div>
-  </div>
-  <div class="card" data-aos="fade-up">
-    <div class="imgBx">
-       <img src="assets/img/ac9.jpg" alt="images">
-    </div>
-    <div class="details">
-       <h2>Disinfectant Chamber</span></h2>
-     </div>
-  </div>
-
-</div>
 
 
 <!-- End of manin content-->
